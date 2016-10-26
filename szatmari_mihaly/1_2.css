@@ -1,7 +1,11 @@
 /*Az 1_2-es feladathoz tartozó css*/
 
+body{
+	background-color: #e67300;
+}
+
 table, tr, th, td{
-	border: 1px solid black;
+	border: 1px double black;
 	border-spacing: 15px;
 	border-collapse: collapse;
 	text-align: center;
@@ -12,6 +16,10 @@ th{
 	background-color: #0099ff;
 }
 
+td:hover{
+	background-color: #00ff00;
+}
+
 .holiday{
 	font-weight: bold;
 }
@@ -19,6 +27,14 @@ th{
 .title{
 	font-size: 20px;
 	font-weight: bold;
+}
+
+#group_1{
+	background-color: white;
+}
+
+#group_2{
+	background-color: red;
 }
 
 #all_saints_day{
