@@ -1,0 +1,30 @@
+/*Az 1_2-es feladathoz tartozó css*/
+
+table, tr, th, td{
+	border: 1px solid black;
+	border-spacing: 15px;
+	border-collapse: collapse;
+	text-align: center;
+	padding: 10px;
+}
+
+th{
+	background-color: #0099ff;
+}
+
+ul{
+	list-style-type: decimal;
+}
+
+.holiday{
+	font-weight: bold;
+}
+
+.title{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#all_saints_day{
+	color: red;
+}
