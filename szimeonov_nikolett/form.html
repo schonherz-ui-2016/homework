@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--A feladat egy olyan HTML oldal elkeszitese, amelyben egy formot hozol letre. Ezzel a formmal a kovetkezo adatokat
+    kuldheted el:
+    nickname (minimum 3 karakter), first name, last name, date of birth
+    A form a http://localhost:3000/ URL-re hivatkozzon es post request-tel kommunikaljon! Termeszetesen legyen egy gomb is,
+    amellyel el lehet kuldeni a formot!-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Homework</title>
+</head>
+<body>
+    <form action="http://localhost:3000/" method="post">
+        Nickname:       <input type="text" name="nickname" minlength="3"><br>
+        First Name:     <input type="text" name="firstname"><br>
+        Last Name:      <input type="text" name="lastname"><br>
+        Date Of Birth:  <input type="date" name="dateofbirth"><br>
+                        <input type="submit" value="button">
+    </form>
+
+</body>
+</html>
