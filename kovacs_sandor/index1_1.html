@@ -1,0 +1,42 @@
+<!--
+1.1
+A feladat egy olyan HTML oldal elkeszitese, amelyben egy formot hozol letre. Ezzel a formmal a kovetkezo adatokat
+kuldheted el:
+nickname (minimum 3 karakter), first name, last name, date of birth
+A form a http://localhost:3000/ URL-re hivatkozzon es post request-tel kommunikaljon! Termeszetesen legyen egy gomb is,
+amellyel el lehet kuldeni a formot!
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<form action="http://localhost:3000/" method="post">
+    <fieldset>
+        <legend>Personal information:</legend>
+        <br>
+       <div>
+           <label for="first-name">First name:</label>
+           <input type="text" name="first-name" id="first-name" placeholder="First name" autofocus="on" required >
+       </div>
+        <br>
+        <div>
+        <label for="last-name">Last name:</label>
+        <input type="text" name="last-name" id="last-name" placeholder="Last name" required>
+        </div>
+        <br>
+        <div>
+        <label for="date_of_birth">Date of birth:</label>
+        <input type="date" name="date_of_birth" id="date_of_birth" min="1900-01-01" max="2010-01-01" required>
+        </div>
+        <br>
+        <input type="submit" value="Submit" id="submit">
+    </fieldset>
+
+</form>
+
+</body>
+</html>

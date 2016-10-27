@@ -1,0 +1,107 @@
+<!--
+1.2
+A feladat egy olyan HTML oldal elkeszitese, amelyben egy novemberi naptarat hozol letre tablazatos formaban. A naptar
+cime "2016 November" legyen! Az oszlopok nevei a hét napjaival egyezzenek meg (hetfovel kezdodjon)! Ebben a honapban
+csak 1-je az unnepnap. Ez a nap legyen vastagon szedett, es ha fele viszed az egerkurzort, akkor jelenjen meg a
+"Mindenszentek" szoveg! Azok a napok, amelyek nem jelennek meg ebben a naptarban (tehat mas honaphoz tartoznak),
+azoknak a cellai legyenek osszevonva es maradjanak kitoltetlenek. Helyezz el egy oszlopcsoportot a vasarnapi oszlopra
+(miutan megismerkedunk a CSS-sel, akkor hasznalni is fogjuk)! Ezt kovetoen a tablazat ala hozz letre egy szamozatlan
+listat, amelyben felsorolod a vasarnapi nevnaposokat! A feladatban eleg, ha csak HTML tageket hasznalsz, CSS formazasra
+nincs szukseg! Tovabbi esemenyeket is megjelolhetsz a naptarban, ha van kedved szorgoskodni (hires szuletesnapok,
+X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene kineznie.
+
+
+2016 November
+| Hetfo | Kedd | Szerda | Csutortok | Pentek | Szombat | Vasarnap |
+|-------|------|--------|-----------|--------|---------|----------|
+|       | 1    | 2      | 3         | 4      | 5       | 6        |
+| 7     | 8    | 9      | 10        | 11     | 12      | 13       |
+| 14    | 15   | 16     | 17        | 18     | 19      | 20       |
+| 21    | 22   | 23     | 24        | 25     | 26      | 27       |
+| 28    | 29   | 30     |           |        |         |          |
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+</head>
+<body>
+<div>
+<table align="center" border="1" width="60%">
+    <caption><h3>2016 November</h3></caption>
+    <colgroup>
+        <col span="6" >
+        <col style="background-color: antiquewhite">
+    </colgroup>
+    <thead>
+    <tr>
+        <th>Hétfő</th>
+        <th>Kedd</th>
+        <th>Szerda</th>
+        <th>Csütörtök</th>
+        <th>Péntek</th>
+        <th>Szombat</th>
+        <th>Vasárnap</th>
+    </tr>
+    </thead>
+
+    <tbody align="center">
+    <tr>
+        <td></td>
+        <td><strong><abbr title="Mindenszentek">1</abbr></strong></td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td colspan="4"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+<div>
+<h3>Vasárnapi névnapok:</h3>
+<ul>
+    <li>November 6: Lénárd névnap van</li>
+    <li>November 13: Szilvia névnap van</li>
+    <li>November 20: Jolán névnap van</li>
+    <li>November 27: Virgil névnap van</li>
+</ul>
+</div>
+
+</body>
+</html>
