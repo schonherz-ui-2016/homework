@@ -1,4 +1,4 @@
-/*1_2-es feladat*/
+/*Az 1_2-es feladathoz tartozo css*/
 
 body{
 	background-color: #ff8000;
@@ -10,19 +10,19 @@ table, tr, th, td{
 	border-spacing: 0px;
 }
 
-table tr:first-child th:first-child {
+tr:first-child th:first-child{
 	border-top-left-radius: 10px;
 }
 
-tbody tr:first-child th:last-child {
+tr:first-child th:last-child{
 	border-top-right-radius: 10px;
 }
 
-tbody tr:last-child td:first-child {
+tr:last-child td:first-child{
 	border-bottom-left-radius: 10px;
 }
 
-tbody tr:last-child td:last-child {
+tr:last-child td:last-child{
 	border-bottom-right-radius: 10px;
 }
 
@@ -32,17 +32,17 @@ th{
 	border-left: 0px;
 }
 
-th:first-child {
+th:first-child{
 	border-left: 1px solid black;
 }
 
-td {
+td{
 	border: 1px solid black;
 	border-left: 0px;
 	border-top: 0px;
 }
 
-td:first-child {
+td:first-child{
 	border-left: 1px solid black;
 }
 
@@ -61,10 +61,7 @@ p{
 	font-size: 20px;
 	font-weight: bold;
 	color: red;
-}
-
-ul{
-
+	padding-left: 15px;
 }
 
 .holiday{
