@@ -18,9 +18,14 @@ amellyel el lehet kuldeni a formot!
     <fieldset>
         <legend>Personal information:</legend>
         <br>
-       <div>
-           <label for="first-name">First name:</label>
-           <input type="text" name="first-name" id="first-name" placeholder="First name" autofocus="on" required >
+        <div>
+            <label for="nick-name">Nick name:</label>
+            <input type="text" name="nick-name" id="nick-name" placeholder="Nick name" pattern=".{3,}" title="Legalább 3 karakter" required >
+        </div>
+        <br>
+        <div>
+        <label for="first-name">First name:</label>
+        <input type="text" name="first-name" id="first-name" placeholder="First name" autofocus="on" required >
        </div>
         <br>
         <div>

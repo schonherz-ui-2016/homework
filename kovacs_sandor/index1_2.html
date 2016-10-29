@@ -25,14 +25,40 @@ X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene
 <head>
     <meta charset="UTF-8">
     <title>Table</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        th{
+            background-color: red;
+            color: yellow;
+        }
+        /*td:nth-last-child(1)*/
+        td:last-child{
+            color: red;
+
+        }
+        td[colspan]{
+            background-color: #BBB;
+        }
+        tr:nth-child(even){
+           background-color: lightblue;
+        }
+        tr:nth-child(odd){
+            background-color: #88FF88;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
 <div>
-<table align="center" border="1" width="60%">
+<table>
     <caption><h3>2016 November</h3></caption>
     <colgroup>
         <col span="6" >
-        <col style="background-color: antiquewhite">
+        <col span="1" ><!--style="background-color: antiquewhite" -->
     </colgroup>
     <thead>
     <tr>
@@ -42,19 +68,19 @@ X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene
         <th>Csütörtök</th>
         <th>Péntek</th>
         <th>Szombat</th>
-        <th>Vasárnap</th>
+        <th class="vn">Vasárnap</th>
     </tr>
     </thead>
 
     <tbody align="center">
     <tr>
-        <td></td>
+        <td colspan="1"></td>
         <td><strong><abbr title="Mindenszentek">1</abbr></strong></td>
         <td>2</td>
         <td>3</td>
         <td>4</td>
         <td>5</td>
-        <td>6</td>
+        <td class="vn">6</td>
     </tr>
     <tr>
         <td>7</td>
@@ -63,7 +89,7 @@ X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene
         <td>10</td>
         <td>11</td>
         <td>12</td>
-        <td>13</td>
+        <td class="vn">13</td>
     </tr>
     <tr>
         <td>14</td>
@@ -72,7 +98,7 @@ X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene
         <td>17</td>
         <td>18</td>
         <td>19</td>
-        <td>20</td>
+        <td class="vn">20</td>
     </tr>
     <tr>
         <td>21</td>
@@ -81,7 +107,7 @@ X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene
         <td>24</td>
         <td>25</td>
         <td>26</td>
-        <td>27</td>
+        <td class="vn">27</td>
     </tr>
     <tr>
         <td>28</td>
