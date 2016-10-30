@@ -18,7 +18,6 @@ listat, amelyben felsorolod a vasarnapi nevnaposokat! A feladatban eleg, ha csak
 nincs szukseg! Tovabbi esemenyeket is megjelolhetsz a naptarban, ha van kedved szorgoskodni (hires szuletesnapok,
 X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene kineznie.
 
-
 2016 November
 | Hetfo | Kedd | Szerda | Csutortok | Pentek | Szombat | Vasarnap |
 |-------|------|--------|-----------|--------|---------|----------|
@@ -27,3 +26,8 @@ X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene
 | 14    | 15   | 16     | 17        | 18     | 19      | 20       |
 | 21    | 22   | 23     | 24        | 25     | 26      | 27       |
 | 28    | 29   | 30     |           |        |         |          |
+
+
+# 2
+Csatolva lett egy kep, amelyben egy HTML oldalt abrazol nagyon keves CSS formazassal. A feladatod, hogy csinalj egy
+hasonlo HTML oldalt, es keszits melle ket CSS fajlt is, melyek kulonbozo megjelenest adnak az oldalnak.
