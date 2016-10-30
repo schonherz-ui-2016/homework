@@ -1,81 +1,79 @@
-/*Az 1_2-es feladathoz tartozo css*/
-
-body{
+body {
 	background-color: #ff8000;
 }
 
-table, tr, th, td{
-	text-align: center;
-	padding: 10px;
+table, td, th, tr {
 	border-spacing: 0px;
+	padding: 10px;
+	text-align: center;
 }
 
-tr:first-child th:first-child{
+tr:first-child th:first-child {
 	border-top-left-radius: 10px;
 }
 
-tr:first-child th:last-child{
+tr:first-child th:last-child {
 	border-top-right-radius: 10px;
 }
 
-tr:last-child td:first-child{
+tr:last-child td:first-child {
 	border-bottom-left-radius: 10px;
 }
 
-tr:last-child td:last-child{
+tr:last-child td:last-child {
 	border-bottom-right-radius: 10px;
 }
 
-th{
+th {
 	background-color: #0099ff;
 	border: 1px solid black;
 	border-left: 0px;
 }
 
-th:first-child{
+th:first-child {
 	border-left: 1px solid black;
 }
 
-td{
+td {
 	border: 1px solid black;
 	border-left: 0px;
 	border-top: 0px;
 }
 
-td:first-child{
+td:first-child {
 	border-left: 1px solid black;
 }
 
-td:hover{
+td:hover {
 	background-color: #00ff00;
 }
 
-caption{
+caption {
 	font-size: 25px;
 	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: 15px;
 }
 
-p{
+p {
+	color: red;
 	font-size: 20px;
 	font-weight: bold;
-	color: red;
 	padding-left: 15px;
 }
 
-.holiday{
+.holiday {
 	font-weight: bold;
 }
 
-#group_1{
-	background-color: white;
+#all_saints_day {
+	color: red;
 }
 
-#group_2{
+[span="1"] {
 	background-color: red;
 }
 
-#all_saints_day{
-	color: red;
+[span="6"] {
+	background-color: white;
 }
