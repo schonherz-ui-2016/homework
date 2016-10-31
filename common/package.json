@@ -1,0 +1,21 @@
+{
+  "name": "uiTraining",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schonherz-ui-2016/homework.git"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "~4.0.0",
+    "body-parser": "~1.0.1",
+    "bootstrap": "3.3.7"
+  },
+  "devDependencies": {
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss nav.scss nav.css"
+  }
+}
