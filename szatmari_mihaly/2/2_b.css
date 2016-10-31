@@ -1,0 +1,132 @@
+body {
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+
+body > nav > div {
+    display: flex;
+    font-size: 15px;
+    justify-content: flex-end;
+}
+
+form {
+    padding-right: 25px;
+}
+
+label {
+    font-size: 20px;
+}
+
+nav {
+    background-color: #33ff33;
+    font-size: 28px;
+    left: 0;
+    padding: .3em .2em;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+nav a {
+
+    background-color: #33cc33;
+    border-radius: 0.3em;
+    color: #FFF;
+    padding: .1em .4em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #009933;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.d_grey {
+    background-color: #cccccc;
+}
+
+.grey {
+    background-color: #d9d9d9;
+}
+
+.title {
+    font-size: 1.2em;
+}
+
+#account {
+    float: right;
+    font-size: 22px;
+}
+
+#blc_1 {
+    width: 60%;
+}
+
+#blc_1 p {
+    margin: 0;
+}
+
+#blc_2 {
+    background-color: #ffffe6;
+    border: 1px solid black;
+    height: 10%;
+    width: 40%
+}
+
+#blc_2 p {
+    margin: 0;
+}
+
+#blc_2 p:first-child {
+    padding-bottom: 12px;
+}
+
+#div_1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#div_3 {
+    margin: 1px 5px 1px;
+    padding: 1px 3px 1px;
+}
+
+#div_3 div {
+    margin: 5px;
+}
+
+#div_4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#div_5 p:last-child {
+    font-size: 0.5em;
+    margin-left: 5px;
+}
+
+#div_5 p:nth-child(2) {
+    background-color: #cccccc;
+}
+
+#main {
+    display: flex;
+    font-size: 0.7em;
+    margin-top: 80px;
+}
+
+#topic_1 {
+    background-color: #e6e6e6;
+    margin-bottom: 5px;
+}
+
+#topic_2 {
+    background-color: #e6e6e6;
+}
+
+[onClick] {
+    padding: 1px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <link id="style" rel="stylesheet" href="2_a.css" type="text/css">
+        <script>
+            function set() {
+                if(document.getElementById("myList").value == "purple") {
+                    document.getElementById("style").href = "2_a.css";
+                }
+
+                else if(document.getElementById("myList").value == "green") {
+                    document.getElementById("style").href = "2_b.css";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <nav role="navigation">
+            <a href="" role="menuitem">Main</a>
+            <a href="" role="menuitem">Registration</a>
+            <a href="" role="menuitem">Administration</a>
+            <button id="account" role="button">Mihaly Szatmari</button>
+            <div>
+                <form>
+                    <label>Weboldal stílusa:</label>
+                   <select id="myList">
+                       <option value="purple">Lila</option>
+                       <option value="green">Zöld</option>
+                   </select>
+                </form>
+                <button onClick="set()">Alkalmaz</button>
+            </div>
+        </nav>
+
+        <div id="main">
+            <div id="blc_1" class="block">
+                <div id="topic_1">
+                    <div id="div_1">
+                        <div>
+                           <p class="title bold">Ez a képzés szuper</p>
+                        </div>
+
+                        <div>
+                            <p>mindenki<br/>11:58</p>
+                        </div>
+                    </div>
+
+                    <div id="div_2">
+                        <p>Szerintem ennél szuperebb képzés nincs a világon<br/>&infin; ember kedveli ezt</p>
+                    </div>
+
+                    <div id="div_3" class="grey">
+                        <div class="d_grey">
+                            <p class="bold">Lacika64</p>
+                            <p>Ú de egyetértek!</p>
+                        </div>
+
+                        <div class="d_grey">
+                            <p class="bold">Majomgyerek</p>
+                            <p>Az oktatók a legjobbak!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="topic_2">
+                    <div id="div_4">
+                        <div>
+                            <p class="title bold">Kinél van pálinka?</p>
+                        </div>
+
+                        <div>
+                            <p>Alkesz istván<br/>tegnap</p>
+                        </div>
+                    </div>
+
+                    <div id="div_5">
+                        <p>Elfogyott tegnap a pálinkám. Ismertek valakit, akitől vehetek?<br/>3 ember kedveli ezt</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="blc_2">
+                <p class="bold">Napi vicc</p>
+                <p>10 féle ember létezik: aki ismeri a 2-es számrendszert, és aki nem.</p>
+            </div>
+        </div>
+    </body>
+</html>
