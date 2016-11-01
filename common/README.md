@@ -9,7 +9,7 @@ amellyel el lehet kuldeni a formot!
 
 # 1.2
 A feladat egy olyan HTML oldal elkeszitese, amelyben egy novemberi naptarat hozol letre tablazatos formaban. A naptar
-cime "2016 November" legyen! Az oszlopok nevei a hét napjaival egyezzenek meg (hetfovel kezdodjon)! Ebben a honapban
+cime "2016 November" legyen! Az oszlopok nevei a hÃ©t napjaival egyezzenek meg (hetfovel kezdodjon)! Ebben a honapban
 csak 1-je az unnepnap. Ez a nap legyen vastagon szedett, es ha fele viszed az egerkurzort, akkor jelenjen meg a
 "Mindenszentek" szoveg! Azok a napok, amelyek nem jelennek meg ebben a naptarban (tehat mas honaphoz tartoznak),
 azoknak a cellai legyenek osszevonva es maradjanak kitoltetlenek. Helyezz el egy oszlopcsoportot a vasarnapi oszlopra
@@ -19,6 +19,7 @@ nincs szukseg! Tovabbi esemenyeket is megjelolhetsz a naptarban, ha van kedved s
 X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene kineznie.
 
 2016 November
+
 | Hetfo | Kedd | Szerda | Csutortok | Pentek | Szombat | Vasarnap |
 |-------|------|--------|-----------|--------|---------|----------|
 |       | 1    | 2      | 3         | 4      | 5       | 6        |
