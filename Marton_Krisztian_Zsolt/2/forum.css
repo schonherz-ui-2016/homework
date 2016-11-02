@@ -1,0 +1,78 @@
+body {
+    font-family: sans-serif;
+    margin: 50px 0 0 10px;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #bbe;
+    right: 0;
+    padding: .3em .2em;
+    font-size: 22px;
+}
+
+nav a {
+    border: 1px solid #88F;
+    border-radius: 0.3em;
+    padding: .1em .4em;
+    background-color: #88F;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    background-color: #44d;
+}
+
+nav button {
+    float:right;
+}
+
+.topic {
+    background-color: #EEE;
+    }
+
+.comms {
+    background-color: #DDD;
+    padding: 10px;
+    margin-left:5px;
+    }
+
+.comm {
+    background-color: #CCC;
+    margin-bottom: 5px;
+}
+
+.comm h3 {
+    margin:0;
+}
+
+.daily_agyfasz {
+    border: 1px solid black;
+
+
+}
+
+.topics {
+    width: 50%;
+}
+
+.saw {
+    float: right;
+    margin:0;
+}
+
+.daily_agyfasz {
+    float: right;
+    width: 50%;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+p {
+    margin: 0;
+}
