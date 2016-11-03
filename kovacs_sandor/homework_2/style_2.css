@@ -1,0 +1,87 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+nav{
+    background-color : #99eea6;
+    display: inline-block;
+    font-size: 22px;
+    height:25px;
+    left: 0;
+    min-width:480px;
+    padding: 10px;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    width: 100%;
+}
+nav a{
+    background-color: #53ff52;
+    border-radius: 7px;
+    color: white;
+    padding: 3px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #33ff1b;
+}
+button#name_button{
+    padding: 3px;
+    float: right;
+    margin-right:15px;
+
+}
+.content{
+    margin: 2px;
+    position: relative;
+
+}
+
+#left{
+    position: absolute;
+    background-color: #baffc6;
+    width:50%;
+    left: 0;
+    top: 50px;
+    padding-bottom: 10px;
+
+}
+#right{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    border: 1px solid black;
+    background-color: white;
+    width: 50%;
+}
+
+.article{
+    background-color: whitesmoke;
+    position: relative;
+}
+.topic_title{
+    font-size: x-large;
+    display: block;
+}
+.topic_data{
+    padding-right: 2px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+.coments_content{
+    background-color: #baffc6;
+    padding: 10px;
+}
+.coment{
+    margin:3px;
+    background-color: #8bff7b;
+}
+.coment_user_name{
+    font-weight: bold;
+}
+.joke_label{
+    font-size: x-large;
+}
