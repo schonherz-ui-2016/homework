@@ -1,0 +1,137 @@
+body {
+    font-family: Ravie, sans-serif;
+    background-color: #666;
+    color: darkred;
+}
+
+nav {
+    background-color: #333;
+    left: 0;
+    padding: .3em .2em;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+nav a {
+    text-shadow: 0px 0px 5px darkred;
+    background-color: #333;
+    color: #666;
+    transition: text-shadow .75s;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    padding: .2em .4em;
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    color: darkred;
+    text-shadow: 0px 0px 8px #fff, 3px 3px 10px #f00, -3px -3px 10px #f00;
+    cursor: pointer;
+    background-color: #111;
+
+}
+
+button ul {
+    display: none;
+}
+
+button {
+    position: absolute;
+    right: .5em;
+    height: 60%;
+    top: 20%;
+    font-size: 1em;
+    cursor: pointer;
+    color: darkred;
+    font-weight: bold;
+    font-family: Ravie, sans-serif;
+    background-color: #ccc;
+}
+
+button:hover{
+    outline: 2px solid darkred;
+    text-decoration: underline;
+    background-color: #eee;
+}
+
+#main {
+    position: absolute;
+    top: 4em;
+    width: 99%;
+    background-color: transparent;
+    /*border: 1px solid black;*/
+}
+
+.daily_joke {
+    position: absolute;
+    right: 0;
+    width: 39%;
+    background-color: #eee;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.post {
+    width: 60%;
+    background-color: #eee;
+    margin-bottom: 1em;
+    float: left;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.time {
+    background-color: transparent;
+    float: right;
+}
+
+.comments {
+    background-color: #ddd;
+    width: 99%;
+    min-height: .5em;
+    float: right;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.comment {
+    background-color: #ccc;
+    margin: 0em 1em .5em;
+}
+
+.comment:first-child {
+    margin: 1em 1em .5em;
+}
+
+.comment:last-child {
+    margin: 0em 1em 1em;
+}
+
+.nickname {
+    margin: 0;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+::selection {
+    background-color: black;
+    color: #ddd;
+}
