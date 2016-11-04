@@ -1,0 +1,80 @@
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    min-height: 200px;
+}
+
+.bg-1 {
+    background-color:white;
+    color: black;
+    text-align: left;
+}
+
+.container-fluid {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 22px;
+}
+.navbar-default{
+    background-color : #BBE;
+
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    background-color: #88F;
+
+}
+.navbar-nav  li a:hover {
+    /*  background-color: #3332ff; !important;*/
+}
+
+.navbar-nav  li a{
+    background-color:#88F ;
+    border-radius: 7px;
+    color: white; !important;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.article{
+    background-color: whitesmoke;
+    position: relative;
+}
+.topic_title{
+    font-size: x-large;
+    display: block;
+}
+.topic_data{
+    padding-right: 2px;
+    float: right;
+
+}
+.coments_content{
+    background-color: #e3e3ff;
+    padding: 10px;
+}
+.coment{
+    margin:3px;
+    background-color: #c7c2ff;
+}
+.coment_user_name{
+    font-weight: bold;
+}
+.joke_label{
+    font-size: x-large;
+}
+#right{
+    border: solid black 1px;
+}

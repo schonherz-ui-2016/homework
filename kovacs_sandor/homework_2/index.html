@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Fórum</title>
-    <link href="style_2.css" type="text/css" rel="stylesheet">
+    <link href="style_1.css" id="styles" type="text/css" rel="stylesheet">
 </head>
 <body>
 <nav role="navigation">
-    <a href="" id="main" role="menuitem">Main</a>
-    <a href="" id="registration" role="menuitem">Registration</a>
-    <a href="" id="administration" role="menuitem">Adminsistration</a>
+    <a href="#" id="main" role="menuitem">Main</a>
+    <a href="#" id="registration" role="menuitem">Registration</a>
+    <a href="#" id="administration" role="menuitem">Adminsistration</a>
+
+    <div class="dropdown">
+        <button class="dropbtn">Styles</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="document.getElementById('styles').href='style_1.css'">Style1</a>
+            <a href="#" onclick="document.getElementById('styles').href='style_2.css'">Style2</a>
+            <a href="bootstrap_index.html">Bootstrap</a>
+        </div>
+    </div>
+
     <button id="name_button">Sandor Kovacs</button>
 </nav>
 <div class="content">
@@ -49,7 +59,7 @@
                 <div class="topic_user_name">Alkesz István</div>
                 <div class="topic_date">tegnap</div>
             </div>
-            <div class="topic_content">Szerintem ennél szuperebb képzés nincs a világon</div>
+            <div class="topic_content">Elfogyott az öszes pálinkám. Ismertek valakit, akitől vehetnék?</div>
             <div class="like_count">3 ember kedveli ezt</div>
         </article>
 
