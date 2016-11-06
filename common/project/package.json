@@ -16,6 +16,6 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "build-css": "node-sass --include-path scss nav.scss nav.css"
+    "build-css": "node-sass --include-path scss main.scss main.css"
   }
 }

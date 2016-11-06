@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; }
+  body nav {
+    background-color: pink;
+    font-size: 22px;
+    padding: .3em .2em;
+    width: 100%; }
+    body nav ul {
+      list-style: none;
+      float: left; }
+      body nav ul li {
+        display: inline-block; }
+      body nav ul li:nth-child(1) {
+        font-size: 16px; }
+      body nav ul li:nth-child(2) {
+        font-size: 20px; }
+      body nav ul li:nth-child(3) {
+        font-size: 24px; }
+    body nav a {
+      -webkit-border-radius: 3em;
+      -moz-border-radius: 3em;
+      -ms-border-radius: 3em;
+      border-radius: 1em;
+      background-color: #88F;
+      color: #FFF;
+      padding: .1em .4em;
+      text-decoration: none; }
+      body nav a:hover {
+        background-color: #FFF; }
+    body nav button {
+      float: right; }
+  body main {
+    width: 60%; }
+    body main div.topic {
+      background-color: #EEE;
+      margin-bottom: 10px; }
+      body main div.topic header {
+        display: flex;
+        justify-content: space-between; }
+        body main div.topic header h4 {
+          margin: 0; }
+        body main div.topic header .author {
+          float: right; }
+      body main div.topic div.comments {
+        margin-left: 5px;
+        padding: 5px;
+        background-color: #DDD; }
+        body main div.topic div.comments div.comment {
+          margin: 5px;
+          background-color: #CCC; }
+  body #rightSide {
+    border: 1px solid black;
+    height: 100%;
+    width: 40%; }
+  body p {
+    margin: 0; }
+  body h3 {
+    margin-top: 0; }
