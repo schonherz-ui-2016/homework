@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+
+			var str = prompt("Kérem adjon meg egy sztringet!"),
+
+				count = 0;
+
+			function wordCounter() {
+
+				str = str.replace(/([A-Z])/g, ' $1');
+
+		  		for (let i = 0; i < str.length; i++) {
+
+		    		if (str.charAt(i) === " ")
+
+		    			count++;
+
+			  	}
+
+			  	count++;
+
+			 	return count;
+
+			}
+
+			console.log("A megadott sztring " + wordCounter() + " szóból áll.");
+
+		</script>
+	</head>
+	<body></body>
+</html>
