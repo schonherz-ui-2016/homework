@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CamelCase</title>
+</head>
+<body>
+<script>
+    var str=prompt("Kérlek adj meg egy szöveget!");
+    var count=0;
+    function camelize(str1) {
+        return str1.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) {
+            count++;
+            return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
+        }).replace(/\s+/g, '');
+    }
+    var strCamelCase= camelize(str);
+    console.log(str+" : " +strCamelCase+" count: "+count);
+</script>
+
+</body>
+</html>
