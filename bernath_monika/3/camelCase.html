@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="container">
+        <form>
+            <input type="text" id="read">
+            <button type="button" onclick="solve()">Click me!</button>
+            <p id="write"></p>
+        </form>
+
+    </div>
+    <script>
+        var db = 1;
+
+        function solve(){
+            var str = document.getElementById('read');
+            var val = str.value;
+            console.log(val);
+            for(let i = 0; i < val.length; i++){
+                if(val[i].toUpperCase() == val[i]){
+                    db++;
+                }
+            }
+            document.getElementById('write').innerHTML = "This string contains " + db + " words.";
+            console.log(db);
+            db = 1;
+        }
+    </script>
+</body>
+</html>
