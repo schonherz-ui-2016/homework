@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>camelCase</title>
+</head>
+<body>
+    <script>
+        var str = prompt("camelCase string:").replace(/\s/g, "").replace(/([A-Z])/g, "|$1");
+        if (str == ""){
+            alert("The string is empty!");
+        }
+        else if(str[0] == str[0].toUpperCase()){
+            alert("The string is not in camelCase form!");
+        }
+        else {
+            var arr = str.split("|");
+            console.log(arr);
+            console.log("The string contains " + arr.length + " word(s).");
+        }
+    </script>
+</body>
+</html>
