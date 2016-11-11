@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input id="in" type="text">
+        <button type="button" onclick="count()">Send your string</button>
+
+    <script>
+
+
+        function count(){
+            var str = document.getElementById('in').value, sum = 0;
+                for(let i = 0; i < str.length; i++){
+                    if(str[i].toUpperCase() == str[i]){
+                        sum++;
+                    }
+                }
+            console.log(++sum);
+        }
+    </script>
+    </body>
+</html>
