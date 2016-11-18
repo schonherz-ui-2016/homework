@@ -2,7 +2,7 @@ $margin: .5em;
 $font-size: 15px;
 $background-color: rgb(0,163,217);
 $font-color: #fff;
-$padding: 280px;
+$padding: 10%;
 $font-family: sans-serif;
 
 body{
@@ -103,13 +103,15 @@ header{
         }
       }
       .info{
-        width: 15%;
+        width: 20%;
         float: right;
         display: flex;
         flex-flow: column;
         border-left: solid 1px #CBCDCE;
         padding: 1.5em 0.5em;
-
+        span{
+          margin-bottom: 1em;
+        }
       }
 
     }
@@ -128,6 +130,20 @@ header{
     .categories{
       display: flex;
       flex-flow: column;
+      .num{
+        float: right;
+        margin: -28px 4px 0 0;
+        color: $background-color;
+        position: relative;
+        font-size: 10px;
+        font-weight: bolder;
+      }
+      .glyphicon-stop{
+        font-size: 120%;
+        float: right;
+        margin-top: -30px;
+        color: $font-color;
+      }
     }
     .fa-folder, .fa-bullhorn, .fa-bar-chart{
       color: #81D2EC;
@@ -137,18 +153,37 @@ header{
     }
     .fa-comments, .fa-comments-o, .fa-users, .fa-sign-in{
       font-size: 150%;
-      padding-left: 10px;
+      padding-left: 15%;
     }
     .forum_statistic{
       div{
         display: flex;
         flex-flow: row;
+        justify-content: space-between;
       }
-
+      .box{
+        display: flex;
+        flex-flow: column;
+        padding-right: .5em;
+        span{
+          margin-bottom: 0.5em;
+          float: inherit;
+        }
+        .number{
+          margin-left: 1.7em;
+        }
+      }
     }
     .todays_event {
-      #admin{
-        float: right;
+      .box2{
+        display: flex;
+        flex-flow: row;
+        #logins{
+          padding-right: 1em;
+        }
+        #admin{
+          float: right;
+        }
       }
     }
   }
@@ -173,6 +208,9 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    span{
+      letter-spacing: 2em;
+    }
   }
   .rights {
     padding: 0 $padding 1em;
@@ -184,7 +222,6 @@ footer{
   li{
     float: left;
     margin: 0 20px 0 0;
-    display: inline;
   }
   ul{
     padding-left: 20px;
