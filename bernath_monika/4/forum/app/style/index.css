@@ -1,0 +1,146 @@
+body {
+  background-color: #ECF0F1;
+  color: #fff; }
+
+header {
+  background-color: #00a3d9;
+  font-size: 33px;
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 0.5em;
+  height: 10%; }
+  header #headbar {
+    padding-left: 280px;
+    float: left;
+    font-style: italic;
+    letter-spacing: .03em; }
+  header .search_login {
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 280px;
+    font-size: 15px; }
+    header .search_login #searchfield {
+      background-color: #29ABD7;
+      border: none;
+      border-radius: 8px;
+      size: 15px;
+      width: 300px;
+      height: 2.5em; }
+    header .search_login #searchicon {
+      margin-left: -1.5em;
+      margin-right: 1.5em;
+      margin-top: 0.7em; }
+    header .search_login #login {
+      padding-top: .5em; }
+
+.fa-check, .fa-comments-o, .fa-eye, .fa-mail-reply, .fa-clock-o, .fa-folder {
+  color: #CBCDCE; }
+
+#container_for_everything {
+  padding: 30px 280px;
+  height: 80%;
+  display: flex;
+  flex-direction: row; }
+  #container_for_everything .comments_container {
+    color: #00a3d9;
+    float: left;
+    display: flex;
+    flex-direction: column; }
+    #container_for_everything .comments_container .comments {
+      margin: 0 10px 10px;
+      background-color: #fff;
+      border-radius: .5em;
+      display: flex;
+      flex-direction: row; }
+      #container_for_everything .comments_container .comments .img_check {
+        float: left;
+        display: flex;
+        flex-flow: column;
+        margin: 20px; }
+        #container_for_everything .comments_container .comments .img_check div {
+          border-top: solid 1px #CBCDCE; }
+        #container_for_everything .comments_container .comments .img_check .fa-check {
+          padding: 15px; }
+      #container_for_everything .comments_container .comments .text {
+        width: 80%; }
+        #container_for_everything .comments_container .comments .text .panel-title {
+          padding-top: 1.5em;
+          font-weight: bolder;
+          font-size: 15px; }
+        #container_for_everything .comments_container .comments .text .comments_text {
+          color: #CBCDCE; }
+        #container_for_everything .comments_container .comments .text div div {
+          background-color: #00a3d9;
+          margin: 1em 0;
+          padding: .3em;
+          height: 1.7em;
+          border-radius: 2px;
+          font-size: 12px;
+          color: #fff; }
+      #container_for_everything .comments_container .comments .info {
+        width: 15%;
+        float: right;
+        display: flex;
+        flex-flow: column;
+        border-left: solid 1px #CBCDCE;
+        padding: 1.5em 0.5em; }
+  #container_for_everything .other_things_container {
+    display: flex;
+    flex-flow: column;
+    float: right; }
+    #container_for_everything .other_things_container .categories, #container_for_everything .other_things_container .forum_statistic, #container_for_everything .other_things_container .todays_event {
+      background-color: #00a3d9;
+      font-family: sans-serif;
+      padding: 18px;
+      border-radius: .5em;
+      margin: 0 10px 10px; }
+    #container_for_everything .other_things_container .categories {
+      display: flex;
+      flex-flow: column; }
+    #container_for_everything .other_things_container .fa-folder, #container_for_everything .other_things_container .fa-bullhorn, #container_for_everything .other_things_container .fa-bar-chart {
+      color: #81D2EC;
+      font-size: 100%;
+      float: right;
+      margin-top: -30px; }
+    #container_for_everything .other_things_container .fa-comments, #container_for_everything .other_things_container .fa-comments-o, #container_for_everything .other_things_container .fa-users, #container_for_everything .other_things_container .fa-sign-in {
+      font-size: 150%;
+      padding-left: 10px; }
+    #container_for_everything .other_things_container .forum_statistic div {
+      display: flex;
+      flex-flow: row; }
+    #container_for_everything .other_things_container .todays_event #admin {
+      float: right; }
+
+h6, h3 {
+  font-size: 15px;
+  font-weight: bold; }
+
+footer {
+  background-color: #00a3d9;
+  font-size: 12px;
+  height: 10%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  footer .about {
+    padding: 1em 280px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  footer .rights {
+    padding: 0 280px 1em;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  footer li {
+    float: left;
+    margin: 0 20px 0 0;
+    display: inline; }
+  footer ul {
+    padding-left: 20px; }
+  footer hr {
+    border-width: 1px;
+    margin: 0 280px; }
