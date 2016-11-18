@@ -64,19 +64,28 @@ body{
   height: 100px;
   background-color: $headerBasic-color;
   color: white;
+  padding: 10px;;
+  hr{margin-top: 0px;
+  }
 }
 
 .left{
   float: left;
   ul{
     list-style-type:none ;
+    :first-child{
+      margin-left: -40px;
+    }
   }
   li{
     float: left;
+    :before {
+      content: '• ';
+    }
 
     a{
       display: block;
-      padding-left:10px;
+      padding-left:45px;
       text-decoration: none;
       color: white;
     }
@@ -237,7 +246,7 @@ hr{
 }
 .titleRightSide span{
   float: right;
-
+  color: #81d2ec;
 }
 
 .themeFirstRightMain{
@@ -287,4 +296,7 @@ hr{
   border-radius: 2px;
   text-align: center;
   text-wrap: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
