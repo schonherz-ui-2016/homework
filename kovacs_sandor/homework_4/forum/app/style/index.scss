@@ -1,0 +1,290 @@
+$headerBasic-color: #00a3d9;
+$headerDarkerBasic-color: #29abd7;
+$bodyBackground-color: #ecf0f1;
+$leftWordColor: #9ea6ab;
+$thinLineColor: #ECF0FF;
+
+.article{
+  display: block;
+  box-sizing: border-box;
+  height: 140px;
+  position: relative;
+  padding: 25px 10px 25px 20px;
+  overflow: hidden;
+  outline-style: solid;
+  outline-width: 4px;
+  outline-color: $bodyBackground-color;
+  border-bottom: solid 5px #ECF0FF;
+
+}
+body{
+  background-color: $bodyBackground-color;
+}
+.btn-default{
+  background-color: $headerDarkerBasic-color;
+  border: none;
+  color: white;
+  &:hover{
+    color: black;
+    background-color: $headerDarkerBasic-color;
+  }
+}
+.clearfix{
+  clear: both;
+}
+.comment{
+  color: $leftWordColor;
+  font-size: 1em;
+}
+.contentArticle{
+  //width: 300px;
+  position:absolute;
+  left: 43px;;
+  padding-right: 80px;
+  padding-left: 25px
+
+  //display: flex;
+}
+.firstRightMain{
+  width: 320px;
+  height: 190px;
+  background-color: $headerBasic-color;
+  //padding: 20px 20px;
+  div:first-child{
+    span{
+      background-color: $headerDarkerBasic-color;
+      //color: $headerDarkerBasic-color;
+      font-size:large;
+    }
+  }
+
+}
+#footer {
+
+  height: 100px;
+  background-color: $headerBasic-color;
+  color: white;
+}
+
+.left{
+  float: left;
+  ul{
+    list-style-type:none ;
+  }
+  li{
+    float: left;
+
+    a{
+      display: block;
+      padding-left:10px;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+.right{
+  float: right;
+  span{padding: 5px;
+    font-size: x-large;
+  }
+}
+.glyphicon-share-alt{
+  -webkit-transform:scaleX(-1);
+  -moz-transform:scaleX(-1);
+  -ms-transform:scaleX(-1);
+  -o-transform:scaleX(-1);
+  transform:scaleX(-1);
+
+}
+header{
+  background-color:$headerBasic-color;
+  height: 70px;
+}
+
+div.infoArticle{
+  padding-top: 5px;
+  &:first-child{
+    padding-top:25px;
+  }
+}
+.imageUser{
+  width: 43px;
+  height: 48px;
+}
+.label-primary{
+  background-color: $headerBasic-color;
+  padding: 4px;
+}
+.leftAuthor{
+  width: 30px;
+  //position: fixed;
+  float: left;
+  height: inherit;
+}
+#leftContent{
+  padding: 1em;
+  padding-top: 2em;
+  margin-left: -2em;
+}
+#leftMain{
+  background-color: #ffffff;
+}
+#leftSpace{
+  background-color: $bodyBackground-color;
+}
+.login{
+  padding-left: 20px;
+  background-color:$headerBasic-color;
+  margin: 10px;
+  border: none;
+  color: white;
+  font-style: normal;
+  &:hover{
+    color: black;
+  }
+}
+#loginClass{
+  background-color: $headerBasic-color;
+  border:none;
+}
+.glyphicon-ok{
+  padding-top: 1em;
+  padding-left: 1em;
+  color: #9ea6ab;
+}
+.pull-left{
+  padding-top: 15px;
+  padding-left: 6%;
+}
+.pull-right{
+  padding-top: 8px;
+  //padding-left:40px;
+}
+
+#rightContent{
+  padding-top:2em;
+}
+.rightInfo{
+  position: absolute;
+  right:0;
+  top: 4px;
+  height: inherit;
+  width: 85px;
+  padding-left: 8px;
+  font-size: smaller;
+  color: $leftWordColor;
+  border-left:solid 1px $thinLineColor;
+
+}
+hr{
+  color: $headerDarkerBasic-color;
+}
+#rightMain{
+  color: white;
+  div{
+    hr{
+      margin-top: 0px;
+      margin-bottom: 0px;
+      color: $headerDarkerBasic-color;
+    }
+  }
+}
+//#rightMain{
+//  color: white;
+//}
+#rightSpace{
+  background-color: $bodyBackground-color;
+}
+.secondRightMain{
+  margin-top:  10px;
+  width: 320px;
+  height: 175px;
+  background-color: $headerBasic-color;
+}
+
+#srch-term{
+  background-color: $headerDarkerBasic-color;
+  border: none;
+  color: white;
+}
+.thirdRightMain{
+  margin-top:  10px;
+  width: 320px;
+  height: 145px;
+  background-color: $headerBasic-color;
+}
+.title{
+  font-size: x-large;
+  float: left;
+
+  font-style: italic;
+  color: white;
+
+}
+
+.titleArticle{
+
+  display: block;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: $headerBasic-color;
+  padding-bottom: 6px;
+
+}
+.titleRightSide{
+  padding: 20px;
+  font-weight:bolder ;
+}
+.titleRightSide span{
+  float: right;
+
+}
+
+.themeFirstRightMain{
+  padding: 10px 20px;
+}
+.themeFirstRightMain span{
+  float: right;
+}
+#middleDivInSecondRightMain{
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+.secondRightMain{
+  .row{
+
+    text-align: center;
+    div:first-child{
+      padding-top: 10px;
+    }
+    div {
+      padding: 5px;
+    }
+    span{
+      font-size: xx-large;
+    }
+  }
+}
+.thirdRightMain{
+  .row{
+    text-align: center;
+    div{
+      padding: 5px 0px 7px 0px;
+      span{
+        font-size: x-large;
+      }
+    }
+  }
+}
+#loginThirdRightMain{
+  border-right: solid 1px white;
+}
+.square{
+  width: 20px;
+  height: 15px;
+  color: $headerBasic-color;
+  background-color: white;
+  border-radius: 2px;
+  text-align: center;
+  text-wrap: normal;
+}
