@@ -1,0 +1,156 @@
+body{
+    background-color: #EEEEEE;
+
+}
+header{
+  font-family: SansSerif;
+  font-variant-position: center;
+  color: white;
+  font-size: 20px;
+  font-color: white;
+  background-color: #00a3d9;
+   hight:500 px;
+  cololor: white;
+   left: 0;
+   padding: .5em .2em;
+   position: fixed;
+   right: 0;
+   top: ,3em;}
+
+h2{
+    font-size: 15px;
+    color:#00CCFF ;
+    font-weight: bold;
+}
+ 
+ #cim{
+    float: left;
+    padding-left: 220px;
+ }
+
+ #headerRight{
+    float: right;
+    padding-right: 180px;
+ }
+
+ #smp{
+   font-family: Italic;
+   font-size: 20px;;
+ }
+
+ #for{
+   font-family: Italic;
+   font-size: 21px;
+   font-weight: bold;
+ }
+
+ #search{
+     font-size:17px;
+     color: inherit;
+     background-color:#00CCFF;
+
+ }
+
+ #btn{
+     font-family: arial;
+     color: white;
+     font-size: 14px;
+     padding: 10px 25px;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+     border: 2px solid #00a3d9;
+     background: #00a3d9;
+ }
+#btn:hover{
+    background-color: #00CCFF;
+    text-decoration: none;
+}
+
+ #search{
+     color: white;
+ }
+
+#searchButton{
+    margin: 0 .5 em 0 -2.5em;
+}
+
+#container{
+    width:800px;
+    margin-left: 215px;
+    margin-right: 200px;
+
+}
+
+#main{
+    width:550px;
+    position: fixed;
+    top: 70px;
+    left: 220px;
+    font-size: 12px;
+}
+
+#content{
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+    margin:10px;
+    float: right;
+    position: fixed;
+    top: 50px;
+    right: 190px;
+    background-color: #00CCFF;
+}
+
+
+#footer{
+    clear: both;
+    padding:10px;
+    background-color: #00a3d9;
+    color: white;
+    width: 1300px;
+    height: 85px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: .1px;
+
+}
+
+#footerLeft{
+    float: left;
+}
+
+#footerRight{
+    float: right;
+}
+
+.posts{
+    border: 1px solid white;
+    background-color: white;
+}
+
+#nav{
+    color:white;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.date{
+    border:2px solid #00CCFF;
+    background-color: #00CCFF;
+    border-radius: 12%;
+    color: white;
+    font-size: 12px;
+}
+
+.type{
+    border:2px solid #00CCFF;
+    background-color: #00CCFF;
+    border-radius: 12%;
+    color: white;
+    font-size: 12px;
+}
+
+
+
