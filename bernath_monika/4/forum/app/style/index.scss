@@ -1,0 +1,198 @@
+$margin: .5em;
+$font-size: 15px;
+$background-color: rgb(0,163,217);
+$font-color: #fff;
+$padding: 280px;
+$font-family: sans-serif;
+
+body{
+  background-color: #ECF0F1;
+  color: $font-color;
+}
+
+header{
+  background-color: $background-color;
+  font-size: 33px;
+  font-family: 'Open Sans Condensed', $font-family;
+  padding: $margin;
+  height: 10%;
+  #headbar{
+    padding-left: $padding;
+    float: left;
+    font-style: italic;
+    letter-spacing: .03em;
+  }
+  .search_login{
+     float: right;
+     display: flex;
+     flex-wrap: wrap;
+     padding-right: $padding;
+     font-size: $font-size;
+      #searchfield{
+        background-color: #29ABD7;
+        border: none;
+        border-radius: 8px;
+        size: $font-size;
+        width: 300px;
+        height: 2.5em;
+      }
+      #searchicon{
+        margin-left: -1.5em;
+        margin-right: 1.5em;
+        margin-top: 0.7em;
+      }
+      #login {
+        padding-top: .5em;
+      }
+   }
+
+}
+
+.fa-check, .fa-comments-o, .fa-eye, .fa-mail-reply, .fa-clock-o, .fa-folder{
+  color: #CBCDCE;
+}
+
+#container_for_everything{
+  padding: 30px $padding;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  .comments_container{
+    color: $background-color;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    .comments{
+      margin: 0 10px 10px;
+      background-color: $font-color;
+      border-radius: .5em;
+      display: flex;
+      flex-direction: row;
+      .img_check{
+        float: left;
+        display: flex;
+        flex-flow: column;
+        margin: 20px;
+        div{
+          border-top: solid 1px #CBCDCE;
+        }
+        .fa-check{
+          padding: 15px;
+        }
+      }
+      .text{
+        width: 80%;
+        .panel-title{
+          padding-top: 1.5em;
+          font-weight: bolder;
+          font-size: 15px;
+        }
+        .comments_text{
+          color: #CBCDCE;
+        }
+        div {
+          div {
+            background-color: $background-color;
+            margin: 1em 0 ;
+            padding: .3em;
+            height: 1.7em;
+            border-radius: 2px;
+            font-size: 12px;
+            color: $font-color;
+          }
+        }
+      }
+      .info{
+        width: 15%;
+        float: right;
+        display: flex;
+        flex-flow: column;
+        border-left: solid 1px #CBCDCE;
+        padding: 1.5em 0.5em;
+
+      }
+
+    }
+  }
+  .other_things_container{
+    display: flex;
+    flex-flow: column;
+    float: right;
+    .categories, .forum_statistic, .todays_event{
+      background-color: $background-color;
+      font-family: $font-family;
+      padding: 18px;
+      border-radius: .5em;
+      margin: 0 10px 10px;
+    }
+    .categories{
+      display: flex;
+      flex-flow: column;
+    }
+    .fa-folder, .fa-bullhorn, .fa-bar-chart{
+      color: #81D2EC;
+      font-size: 100%;
+      float: right;
+      margin-top: -30px;
+    }
+    .fa-comments, .fa-comments-o, .fa-users, .fa-sign-in{
+      font-size: 150%;
+      padding-left: 10px;
+    }
+    .forum_statistic{
+      div{
+        display: flex;
+        flex-flow: row;
+      }
+
+    }
+    .todays_event {
+      #admin{
+        float: right;
+      }
+    }
+  }
+}
+
+h6, h3{
+  font-size: $font-size;
+  font-weight: bold;
+}
+
+footer{
+    background-color: $background-color;
+    font-size: 12px;
+    height: 10%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  .about {
+    padding: 1em $padding 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .rights {
+    padding: 0 $padding 1em;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  li{
+    float: left;
+    margin: 0 20px 0 0;
+    display: inline;
+  }
+  ul{
+    padding-left: 20px;
+  }
+  hr{
+    border-width: 1px;
+    margin: 0 $padding;
+  }
+
+}
+
