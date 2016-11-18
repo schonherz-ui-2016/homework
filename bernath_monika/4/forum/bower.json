@@ -1,0 +1,20 @@
+{
+  "name": "forum",
+  "description": "",
+  "main": "forum.js",
+  "authors": [
+    "Bernath Monika <bernathm93@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/bmoni/gyakorlat",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
