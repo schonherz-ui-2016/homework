@@ -1,0 +1,262 @@
+body {
+    background-color: #f2f2f2;
+    color: #b3b3b3;
+    font-size: 12px;
+    .blur {
+        font-size: 18px;
+        opacity: 0.5;
+    }
+    .large {
+        font-size: 48px;
+    }
+    #medium {
+        font-size: 28px;
+    }
+    footer {
+        color: white;
+        background-color: #3399ff;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 12px 180px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        > div {
+            display: flex;
+            justify-content: space-between;
+            &:first-child {
+                > div {
+                    &:last-child {
+                        i {
+                            &:first-child {
+                                margin-right: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                border-top: 1px solid white;
+                padding-top: 12px;
+            }
+        }
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 15px;
+            li {
+                &:first-child {
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+    header {
+        align-items: center;
+        background-color: #3399ff;
+        display: flex;
+        font-size: 15px;
+        justify-content: space-between;
+        padding: 20px 180px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        button {
+            background-color: #3399ff;
+            border: 1px solid #3399ff;
+            color: white;
+            height: 35px;
+            margin-left: 15px;
+        }
+        > div {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            > div {
+                align-items: center;
+                background-color: #00b3ee;
+                border-radius: 5px;
+                > button {
+                    background-color: #00b3ee;
+                    border: none;
+                    color: white;
+                    margin-right: 12px;
+                    padding: 0 12px 0;
+                }
+            }
+        }
+        div {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+        input {
+            background-color: #00b3ee;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 14px;
+            &::-webkit-input-placeholder {
+                color: white;
+            }
+        }
+        p {
+            color: white;
+            font-size: 25px;
+            font-style: italic;
+        }
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        margin: 110px 0 110px 0;
+        padding: 0 180px 0;
+           > div {
+                &:first-child {
+                    margin-right: 24px;
+                    > div {
+                        background-color: white;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        padding: 16px;
+                        > div {
+                            display: flex;
+                            justify-content: space-between;
+                            i {
+                                border-top: 1px solid #d9d9d9;
+                                font-size: 18px;
+                                margin-top: 18px;
+                                padding: 24px 24px 5px 24px;
+                            }
+                            &:last-child {
+                                border-left: 1px solid #d9d9d9;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                padding-left: 12px;
+                                white-space: nowrap;
+                            }
+                            > div {
+                                &:first-child {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                &:nth-child(2) {
+                                    margin: 0 12px 0 12px;
+                                    > p {
+                                        &:first-child {
+                                            color: #00b3ee;
+                                            font-size: 15px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                    > div {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        margin: 8px 0 8px 0;
+                                        p {
+                                            background-color: #00b3ee;
+                                            border-radius: 5px;
+                                            color: white;
+                                            padding: 5px 10px 5px;
+                                            &:first-child {
+                                                margin-right: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:last-child {
+                                    p {
+                                        margin: 8px 0 8px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                   > div {
+                       color: white;
+                       background-color: #0099ff;
+                       border-radius: 5px;
+                       font-size: 14px;
+                       margin-bottom: 8px;
+                       padding: 20px;
+                       &:first-child {
+                           display: flex;
+                           flex-direction: column;
+                           > div {
+                               display: flex;
+                               justify-content: space-between;
+                               &:nth-child(n + 2) {
+                                   border-top: 1px solid #8c8c8c;
+                                   padding-top: 8px;
+                               }
+                           }
+                       }
+                       &:nth-child(2) {
+                           > div {
+                               &:first-child {
+                                   display: flex;
+                                   justify-content: space-between;
+                                   padding: 8px;
+                               }
+                               &:nth-child(2) {
+                                   border-top: 1px solid #8c8c8c;
+                                   display: flex;
+                                   justify-content: space-between;
+                                   > div {
+                                       text-align: center;
+                                       padding: 12px 20px;
+                                       &:nth-child(2) {
+                                           border-left: 1px solid #8c8c8c;
+                                           border-right: 1px solid #8c8c8c;
+                                       }
+                                       > p {
+                                           margin-top: 10px;
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                       &:nth-child(3) {
+                           > div {
+                               &:first-child {
+                                   display: flex;
+                                   justify-content: space-between;
+                                   padding: 12px;
+                               }
+                               &:nth-child(2) {
+                                   border-top: 1px solid #8c8c8c;
+                                   display: flex;
+                                   justify-content: flex-start;
+                                   > div {
+                                       &:first-child {
+                                           border-right: 1px solid #8c8c8c;
+                                           padding: 25px;
+                                           text-align: center;
+                                           p {
+                                               margin-top: 10px;
+                                           }
+                                       }
+                                       &:last-child {
+                                           > p {
+                                               margin: 15px 0 0 15px;
+                                               white-space: nowrap;
+                                           }
+                                       }
+                                   }
+
+                               }
+                           }
+                       }
+                   }
+                }
+           }
+    }
+}
