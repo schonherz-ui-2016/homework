@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CamelCase</title>
+</head>
+<body>
+<script>
+    var str=prompt("Please enter a camelcase string!");
+	var count=0;
+	
+function blablaa() {
+    str = str.trim();
+    if (str === "") {
+			console.log("it is empty!");
+			} 
+	else
+			return str.match(/^[a-z]|[A-Z]/g).length;
+}
+    
+	var textLong= blablaa(str);
+    console.log(str+" : "+textLong);
+</script>
+
+</body>
+</html>
