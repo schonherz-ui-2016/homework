@@ -1,0 +1,249 @@
+$theme-color: #00a3d9;
+$body-background: #ecf0f1;
+$white: #fff;
+$input-background: #29abd7;
+$input-border: #3aaed7;
+$grey: #bec4c7;
+$icon-blue: #81d2ec;
+$header-border: #0797c7;
+
+* {
+  box-sizing: border-box;
+  padding: .15em;
+
+}
+
+.max-size{
+  width: 1150px;
+}
+
+.flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.aic {
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.jcs_b {
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+.jcc {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.jce {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+
+.wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.border-radius {
+  border-radius: 2px;
+}
+
+body {
+
+  background-color: $body-background;
+  margin: 0;
+
+  header {
+    background-color: $theme-color;
+    color: $white;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    span {
+      font-size: 2em;
+      font-style: italic;
+    }
+
+    #search {
+      position: relative;
+      input {
+        background-color: $input-background;
+        border: 1px solid $input-border;
+        padding: 6px 30px 6px 10px;
+        position: relative;
+        &:-moz-placeholder, &:-ms-input-placeholder {
+          color: $white;
+        }
+        &::-webkit-input-placeholder {
+          color: $white;
+        }
+      }
+      .glyphicon {
+        position: absolute;
+        padding: 10px;
+        right: 0px;
+      }
+    }
+  }
+
+  button{
+    background-color: $theme-color;
+    border: none;
+    margin-left: 10px;
+  }
+
+  #container{
+
+    #comments {
+
+      .comment {
+        background-color: $white;
+        color: $grey;
+        margin: 1em 0;
+        width: 98%;
+
+        .picture {
+          width: 10%;
+
+          .fa-user {
+            font-size: 4em;
+            margin: .2em;
+            padding-bottom: .25em;
+            border-bottom: 1px solid $body-background;
+          }
+          .fa-check {
+            font-size: 1.5em;
+            margin: 0em 1.15em .55em;
+          }
+        }
+
+        .comm_body {
+          width: 75%;
+
+          h1 {
+            color: $theme-color;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: .5em .5em .5em .25em;
+            text-transform: uppercase;
+          }
+
+          p {
+            margin: 1em 1em .5em .5em;
+            text-align: justify;
+          }
+
+          .time, .type {
+            background-color: $theme-color;
+            color: $white;
+            font-size: .85em;
+            display: inline;
+            padding: .35em;
+          }
+          .time {
+            margin: 0em .25em 1em .75em;
+          }
+          .type {
+            margin-left: .25em;
+          }
+        }
+
+        .comm_stats {
+          width: 15%;
+          border-left: 1px solid $body-background;
+        }
+
+        &:first-child {
+          margin-top: 1em;
+        }
+
+        &:last-child {
+          margin-bottom: 1em;
+        }
+      }
+    }
+
+    #info {
+      width: 34%;
+      &:last-child {
+        margin-bottom: 1em;
+      }
+      .stat-cont {
+        background-color: $theme-color;
+        color: $white;
+        margin-top: 1em;
+        .header {
+          border-bottom: 1px solid $header-border;
+          padding: 1.35em;
+        }
+      }
+      .header-icon {
+        color: $icon-blue;
+      }
+      .row-item {
+        padding: .5em 1.5em;
+        border-bottom: 1px solid #0797c7;
+      }
+      .row-item-last {
+        padding: .5em 1.5em 1.5em;
+      }
+      .counter {
+        background-color: $white;
+        color: $theme-color;
+        padding: 0 .35em;
+      }
+      .column-item-equal {
+        padding-bottom: 1.5em;
+        text-align: center;
+        width: 33%;
+        .fa {
+          color: $white;
+          font-size: 3em;
+          margin-top: .25em;
+          padding: .1em;
+        }
+        .smaller {
+          font-size: 2em;
+        }
+        p {
+          padding: .15em;
+          margin: 0;
+        }
+      }
+      .column-item-double {
+        border-left: 1px solid $header-border;
+        padding-bottom: 1.5em;
+        text-align: center;
+        width: 66%;
+        p {
+          padding: .5em;
+          margin: 0;
+        }
+      }
+      .center {
+        border-left: 1px solid $header-border;
+        border-right: 1px solid $header-border;
+      }
+
+    }
+  }
+
+  footer {
+    background-color: $theme-color;
+    color: $white;
+    font-size: .8em;
+    padding: .3em;
+    width: 100%;
+
+    #terms{
+      margin-left: 10px;
+    }
+
+    #up {
+      border-bottom: 1px solid $white;
+    }
+  }
+
+}

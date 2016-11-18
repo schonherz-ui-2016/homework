@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function playWithMaps() {
+            var map = {
+                a: 10,
+                b: 20,
+                c: 'b',
+                30: 'duck'
+            };
+
+            console.log('map.a: ', map.a);
+            console.log('map.b: ', map.b);
+            console.log('map.c: ', map.c);
+            console.log('map[\'a\']: ', map['a']);
+            console.log('map[map[\'c\']]: ', map[map['c']]);
+            // map[ map.a (10) + map.b (20) = 30 ]
+            console.log('map[map[\'a\'] + map.b]: ', map[map['a'] + map.b]);
+        }
+
+        function stateExample() {
+            var states = {
+                green: {
+                    color: 'green',
+                    func: function() {
+                        console.log('Go!');
+                    },
+                    next: 'yellow'
+                },
+                red: {
+                    color: 'red',
+                    func: function() {
+                        console.log('Stop!');
+                    },
+                    next: 'green'
+                },
+                yellow: {
+                    color: 'yellow',
+                    func: function() {
+                        console.log('Hurry!');
+                    },
+                    next: 'red'
+                }
+            };
+            var trafficLight = states.red;
+            for (var i = 0; i < 5; i++) {
+                console.log('My color is ' + trafficLight.color + '. It means:');
+                trafficLight.func();
+                trafficLight = states[trafficLight.next];
+            }
+        }
+
+        function filterExample() {
+            var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            // Kivalasztja az 5-nel nagyobb szamokat. A functiont egy valtozo tartalmazza.
+            var greaterThanFiveFilter = function(value) {
+                return value > 5;
+            };
+
+            // Kivalasztja a 2-t, 5-ot es a 9-et. Ez egy anonim function.
+            var filtered1 = array.filter(function(value) {
+                return value === 2 || value === 5 || value === 9;
+            });
+            // Atadjuk a greaterThanFiveFilter valtozot parameterkent, amely tartalma egy function. Mivel a
+            // greaterThanFiveFilter egy valtozo, ezert azt a ra valo hivatkozas elott deklaralni kell!
+            var filtered2 = array.filter(greaterThanFiveFilter);
+            // Atadjuk az oddFilter functiont, mint parameter. Mivel az egy function, ezert (majdnem) teljesen mindegy, hogy hol
+            // hozzuk letre azt.
+            var filtered3 = array.filter(oddFilter);
+
+            console.log(filtered1);
+            console.log(filtered2);
+            console.log(filtered3);
+
+            // Kivalasztja a paratlan szamokat (a 0 false erteket jelent, ezert ha az osztasi maradek 0, tehat paros szamrol
+            // van szo, akkor az nem fog kivalasztasra kerulni).
+            function oddFilter(value) {
+                return value % 2;
+            }
+        }
+    </script>
+</body>
+</html>
