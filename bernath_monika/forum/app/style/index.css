@@ -9,7 +9,7 @@ header {
   padding: 0.5em;
   height: 10%; }
   header #headbar {
-    padding-left: 280px;
+    padding-left: 10%;
     float: left;
     font-style: italic;
     letter-spacing: .03em; }
@@ -17,7 +17,7 @@ header {
     float: right;
     display: flex;
     flex-wrap: wrap;
-    padding-right: 280px;
+    padding-right: 10%;
     font-size: 15px; }
     header .search_login #searchfield {
       background-color: #29ABD7;
@@ -37,7 +37,7 @@ header {
   color: #CBCDCE; }
 
 #container_for_everything {
-  padding: 30px 280px;
+  padding: 30px 10%;
   height: 80%;
   display: flex;
   flex-direction: row; }
@@ -78,12 +78,14 @@ header {
           font-size: 12px;
           color: #fff; }
       #container_for_everything .comments_container .comments .info {
-        width: 15%;
+        width: 20%;
         float: right;
         display: flex;
         flex-flow: column;
         border-left: solid 1px #CBCDCE;
         padding: 1.5em 0.5em; }
+        #container_for_everything .comments_container .comments .info span {
+          margin-bottom: 1em; }
   #container_for_everything .other_things_container {
     display: flex;
     flex-flow: column;
@@ -97,6 +99,18 @@ header {
     #container_for_everything .other_things_container .categories {
       display: flex;
       flex-flow: column; }
+      #container_for_everything .other_things_container .categories .num {
+        float: right;
+        margin: -28px 4px 0 0;
+        color: #00a3d9;
+        position: relative;
+        font-size: 10px;
+        font-weight: bolder; }
+      #container_for_everything .other_things_container .categories .glyphicon-stop {
+        font-size: 120%;
+        float: right;
+        margin-top: -30px;
+        color: #fff; }
     #container_for_everything .other_things_container .fa-folder, #container_for_everything .other_things_container .fa-bullhorn, #container_for_everything .other_things_container .fa-bar-chart {
       color: #81D2EC;
       font-size: 100%;
@@ -104,12 +118,27 @@ header {
       margin-top: -30px; }
     #container_for_everything .other_things_container .fa-comments, #container_for_everything .other_things_container .fa-comments-o, #container_for_everything .other_things_container .fa-users, #container_for_everything .other_things_container .fa-sign-in {
       font-size: 150%;
-      padding-left: 10px; }
+      padding-left: 15%; }
     #container_for_everything .other_things_container .forum_statistic div {
       display: flex;
+      flex-flow: row;
+      justify-content: space-between; }
+    #container_for_everything .other_things_container .forum_statistic .box {
+      display: flex;
+      flex-flow: column;
+      padding-right: .5em; }
+      #container_for_everything .other_things_container .forum_statistic .box span {
+        margin-bottom: 0.5em;
+        float: inherit; }
+      #container_for_everything .other_things_container .forum_statistic .box .number {
+        margin-left: 1.7em; }
+    #container_for_everything .other_things_container .todays_event .box2 {
+      display: flex;
       flex-flow: row; }
-    #container_for_everything .other_things_container .todays_event #admin {
-      float: right; }
+      #container_for_everything .other_things_container .todays_event .box2 #logins {
+        padding-right: 1em; }
+      #container_for_everything .other_things_container .todays_event .box2 #admin {
+        float: right; }
 
 h6, h3 {
   font-size: 15px;
@@ -125,22 +154,23 @@ footer {
   flex-direction: column;
   justify-content: space-around; }
   footer .about {
-    padding: 1em 280px 0;
+    padding: 1em 10% 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    footer .about span {
+      letter-spacing: 2em; }
   footer .rights {
-    padding: 0 280px 1em;
+    padding: 0 10% 1em;
     float: right;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
   footer li {
     float: left;
-    margin: 0 20px 0 0;
-    display: inline; }
+    margin: 0 20px 0 0; }
   footer ul {
     padding-left: 20px; }
   footer hr {
     border-width: 1px;
-    margin: 0 280px; }
+    margin: 0 10%; }
