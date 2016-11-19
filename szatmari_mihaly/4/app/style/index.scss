@@ -117,6 +117,7 @@ body {
            > div {
                 &:first-child {
                     margin-right: 24px;
+                    width: 2000px;
                     > div {
                         background-color: white;
                         border-radius: 5px;
@@ -184,9 +185,11 @@ body {
                        color: white;
                        background-color: #0099ff;
                        border-radius: 5px;
+                       float: left;
                        font-size: 14px;
-                       margin-bottom: 8px;
+                       margin: 3px 3px 5px 3px;
                        padding: 20px;
+                       width: 300px;
                        &:first-child {
                            display: flex;
                            flex-direction: column;
@@ -196,6 +199,14 @@ body {
                                &:nth-child(n + 2) {
                                    border-top: 1px solid #8c8c8c;
                                    padding-top: 8px;
+                                   span {
+                                       background-color: white;
+                                       border-radius: 3px;
+                                       color: #0099ff;
+                                       font-weight: bold;
+                                       margin: 8px 0 8px 8px;
+                                       padding: 0 6px 0 6px;
+                                   }
                                }
                            }
                        }

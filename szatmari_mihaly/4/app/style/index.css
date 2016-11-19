@@ -86,7 +86,8 @@ body {
     margin: 110px 0 110px 0;
     padding: 0 180px 0; }
     body section > div:first-child {
-      margin-right: 24px; }
+      margin-right: 24px;
+      width: 2000px; }
       body section > div:first-child > div {
         background-color: white;
         border-radius: 5px;
@@ -135,9 +136,11 @@ body {
       color: white;
       background-color: #0099ff;
       border-radius: 5px;
+      float: left;
       font-size: 14px;
-      margin-bottom: 8px;
-      padding: 20px; }
+      margin: 3px 3px 5px 3px;
+      padding: 20px;
+      width: 300px; }
       body section > div:last-child > div:first-child {
         display: flex;
         flex-direction: column; }
@@ -147,6 +150,13 @@ body {
           body section > div:last-child > div:first-child > div:nth-child(n + 2) {
             border-top: 1px solid #8c8c8c;
             padding-top: 8px; }
+            body section > div:last-child > div:first-child > div:nth-child(n + 2) span {
+              background-color: white;
+              border-radius: 3px;
+              color: #0099ff;
+              font-weight: bold;
+              margin: 8px 0 8px 8px;
+              padding: 0 6px 0 6px; }
       body section > div:last-child > div:nth-child(2) > div:first-child {
         display: flex;
         justify-content: space-between;
