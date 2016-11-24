@@ -1,0 +1,19 @@
+{
+  "name": "forum2",
+  "description": "Egy forum alkalmazas",
+  "main": "index.js",
+  "authors": [
+    "Ksanci"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DrakeCompany/SWLearn",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

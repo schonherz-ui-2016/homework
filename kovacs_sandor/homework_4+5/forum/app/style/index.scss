@@ -4,7 +4,7 @@ $bodyBackground-color: #ecf0f1;
 $leftWordColor: #9ea6ab;
 $thinLineColor: #ECF0FF;
 
-.article{
+.article {
   display: block;
   box-sizing: border-box;
   height: 140px;
@@ -17,212 +17,251 @@ $thinLineColor: #ECF0FF;
   border-bottom: solid 5px #ECF0FF;
 
 }
-body{
+
+body {
   background-color: $bodyBackground-color;
 }
-.btn-default{
+
+.btn-default {
   background-color: $headerDarkerBasic-color;
   border: none;
   color: white;
-  &:hover{
+  &:hover {
     color: black;
     background-color: $headerDarkerBasic-color;
   }
 }
-.clearfix{
+
+.clearfix {
   clear: both;
 }
-.comment{
+
+.comment {
   color: $leftWordColor;
   font-size: 1em;
 }
-.contentArticle{
+
+.contentArticle {
   //width: 300px;
-  position:absolute;
+  position: absolute;
   left: 43px;;
   padding-right: 80px;
-  padding-left: 25px
-
-  //display: flex;
+  padding-left: 25px;
 }
-.firstRightMain{
+
+//display: flex;
+
+.firstRightMain {
   width: 320px;
   height: 190px;
   background-color: $headerBasic-color;
   //padding: 20px 20px;
-  div:first-child{
-    span{
+  div:first-child {
+    span {
       background-color: $headerDarkerBasic-color;
       //color: $headerDarkerBasic-color;
-      font-size:large;
+      font-size: large;
     }
   }
 
 }
+
 #footer {
 
   height: 100px;
   background-color: $headerBasic-color;
   color: white;
   padding: 10px;;
-  hr{margin-top: 0px;
+  hr {
+    margin-top: 0px;
   }
 }
 
-.left{
+.left {
   float: left;
-  ul{
-    list-style-type:none ;
-    :first-child{
+  ul {
+    list-style-type: none;
+    :first-child {
       margin-left: -40px;
     }
   }
-  li{
+  li {
+
     float: left;
     :before {
-      content: '• ';
+      content: '• '
     }
-
-    a{
+    a {
       display: block;
-      padding-left:45px;
+      padding-left: 45px;
       text-decoration: none;
       color: white;
+
     }
   }
 }
-.right{
+
+.right {
   float: right;
-  span{padding: 5px;
+  span {
+    padding: 5px;
     font-size: x-large;
   }
 }
-.glyphicon-share-alt{
-  -webkit-transform:scaleX(-1);
-  -moz-transform:scaleX(-1);
-  -ms-transform:scaleX(-1);
-  -o-transform:scaleX(-1);
-  transform:scaleX(-1);
+
+.glyphicon-share-alt {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  left: -13px;
 
 }
-header{
-  background-color:$headerBasic-color;
+
+header {
+  background-color: $headerBasic-color;
   height: 70px;
 }
 
-div.infoArticle{
+div.infoArticle {
   padding-top: 5px;
-  &:first-child{
-    padding-top:25px;
+  &:first-child {
+    padding-top: 25px;
   }
 }
-.imageUser{
+
+.imageUser {
   width: 43px;
   height: 48px;
 }
-.label-primary{
+
+.label-primary {
   background-color: $headerBasic-color;
   padding: 4px;
 }
-.leftAuthor{
+
+.leftAuthor {
   width: 30px;
   //position: fixed;
   float: left;
   height: inherit;
 }
-#leftContent{
+
+#leftContent {
   padding: 1em;
   padding-top: 2em;
   margin-left: -2em;
 }
-#leftMain{
+
+#leftMain {
   background-color: #ffffff;
 }
-#leftSpace{
+
+#leftSpace {
   background-color: $bodyBackground-color;
 }
-.login{
+
+.login {
   padding-left: 20px;
-  background-color:$headerBasic-color;
+  background-color: $headerBasic-color;
   margin: 10px;
   border: none;
   color: white;
   font-style: normal;
-  &:hover{
+  &:hover {
     color: black;
   }
 }
-#loginClass{
+
+#loginClass {
   background-color: $headerBasic-color;
-  border:none;
+  border: none;
 }
-.glyphicon-ok{
+
+.glyphicon-ok {
   padding-top: 1em;
   padding-left: 1em;
   color: #9ea6ab;
 }
-.pull-left{
+
+.modButton {
+  position: relative;
+  top: 0;
+  left: -6px;
+
+}
+
+.pull-left {
   padding-top: 15px;
   padding-left: 6%;
 }
-.pull-right{
+
+.pull-right {
   padding-top: 8px;
   //padding-left:40px;
 }
 
-#rightContent{
-  padding-top:2em;
+#rightContent {
+  padding-top: 2em;
 }
-.rightInfo{
+
+.rightInfo {
   position: absolute;
-  right:0;
+  right: 0;
   top: 4px;
   height: inherit;
-  width: 85px;
+  width: 90px;
   padding-left: 8px;
   font-size: smaller;
   color: $leftWordColor;
-  border-left:solid 1px $thinLineColor;
+  border-left: solid 1px $thinLineColor;
 
 }
-hr{
+
+hr {
   color: $headerDarkerBasic-color;
 }
-#rightMain{
+
+#rightMain {
   color: white;
-  div{
-    hr{
+  div {
+    hr {
       margin-top: 0px;
       margin-bottom: 0px;
       color: $headerDarkerBasic-color;
     }
   }
 }
+
 //#rightMain{
 //  color: white;
 //}
-#rightSpace{
+#rightSpace {
   background-color: $bodyBackground-color;
 }
-.secondRightMain{
-  margin-top:  10px;
+
+.secondRightMain {
+  margin-top: 10px;
   width: 320px;
   height: 175px;
   background-color: $headerBasic-color;
 }
 
-#srch-term{
+#srch-term {
   background-color: $headerDarkerBasic-color;
   border: none;
   color: white;
 }
-.thirdRightMain{
-  margin-top:  10px;
+
+.thirdRightMain {
+  margin-top: 10px;
   width: 320px;
   height: 145px;
   background-color: $headerBasic-color;
 }
-.title{
+
+.title {
   font-size: x-large;
   float: left;
 
@@ -231,7 +270,7 @@ hr{
 
 }
 
-.titleArticle{
+.titleArticle {
 
   display: block;
   text-transform: uppercase;
@@ -240,55 +279,68 @@ hr{
   padding-bottom: 6px;
 
 }
-.titleRightSide{
+
+.titleRightSide {
   padding: 20px;
-  font-weight:bolder ;
-}
-.titleRightSide span{
-  float: right;
-  color: #81d2ec;
+  font-weight: bolder;
 }
 
-.themeFirstRightMain{
+.titleRightSide span {
+  float: right;
+  color: #81d2ec;
+
+}
+
+.titleUnder {
+  display: inline-block;
+}
+
+.themeFirstRightMain {
   padding: 10px 20px;
 }
-.themeFirstRightMain span{
+
+.themeFirstRightMain span {
   float: right;
 }
-#middleDivInSecondRightMain{
+
+#middleDivInSecondRightMain {
   border-left: solid 1px white;
   border-right: solid 1px white;
 }
-.secondRightMain{
-  .row{
+
+.secondRightMain {
+  .row {
 
     text-align: center;
-    div:first-child{
+    div:first-child {
       padding-top: 10px;
     }
     div {
       padding: 5px;
     }
-    span{
+    span {
       font-size: xx-large;
     }
   }
 }
-.thirdRightMain{
-  .row{
+
+.thirdRightMain {
+  .row {
     text-align: center;
-    div{
+    div {
       padding: 5px 0px 7px 0px;
-      span{
+      span {
         font-size: x-large;
       }
     }
   }
 }
-#loginThirdRightMain{
+
+#loginThirdRightMain {
   border-right: solid 1px white;
 }
-.square{
+
+.square {
   width: 20px;
   height: 15px;
   color: $headerBasic-color;
@@ -299,4 +351,34 @@ hr{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.template {
+  display: none;
+}
+
+.modal {
+  display: none;
+  //width: 100%;
+  background-color: wheat;
+}
+
+.deleteTopic {
+  float: right;
+}
+
+.modModal {
+  display: none;
+  background-color: #4cae4c;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+
 }

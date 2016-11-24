@@ -1,0 +1,23 @@
+{
+  "name": "forum2",
+  "version": "1.0.0",
+  "description": "Egy forum alkalmazas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ksanci",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-express": "^0.3.5",
+    "gulp-sass": "^2.3.2",
+    "node-persist": "^2.0.7"
+  },
+  "dependencies": {
+    "gulp-sass": "^2.3.2",
+    "gulp": "^3.9.1"
+  }
+}

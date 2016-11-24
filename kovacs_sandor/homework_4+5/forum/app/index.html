@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forum</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="style/index.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <div class="row">
+
+            <div class="col-sm-1 col-md-1"></div>
+            <div class="col-sm-6 col-md-6 pull-left">
+                <div class="title">Simple<span style="font-weight: bold;">Forum</span></div>
+            </div>
+            <div class="col-sm-5 col-md-5 pull-right">
+                <form class="navbar-form" role="search" method="get">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
+                            </button>
+                            <button class="btn btn-default" type="button" id="loginClass"><i class="login">Login</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1 col-md-1" id="leftSpace">
+            <button class="buttonModal">+</button>
+
+        </div>
+        <div class="col-sm-7 col-md-7" id="leftContent">
+            <section id="leftMain">
+
+
+                <article class="article template">
+
+                    <!--<div class="clearfix"></div>-->
+                    <div class="leftAuthor">
+                        <img src="images/userIcon.jpg" class="imageUser">
+                        <div><i class="glyphicon glyphicon-ok"></i></div>
+                    </div>
+                    <div class="contentArticle">
+                        <div class="titleArticle title">quote of the day</div>
+                        <div class="clearfix"></div>
+                        <div class="titleUnder">
+                            <p>
+                                <span class="label label-primary"><span
+                                        class="glyphicon glyphicon-time"></span>&nbsp;<span class="created">09/10/2015 11:52 AM</span></span>
+                                <span class="label label-primary"><span
+                                        class="glyphicon glyphicon-folder-open">&nbsp;</span><span class="category"> General</span></span>
+                            </p>
+                        </div>
+                        <div class="comment brief">Work hard for what you want because it won't come to you without a
+                            fight. You have to be strong and courageous and know...
+                        </div>
+                    </div>
+
+                    <div class="rightInfo">
+                        <div>
+                            <button class="deleteTopic" type="submit" id="delTopic">x</button>
+                        </div>
+                        <div>
+                            <button class="modButton" type="submit" id="modButton">mod</button>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="infoArticle "><span class="glyphicon glyphicon-eye-open">&nbsp;</span><span
+                                class="views"></span> &nbsp;<span>View</span></div>
+                        <div class="infoArticle "><span class="fa fa-comments-o">&nbsp;&nbsp; </span><span
+                                class="replay"></span> <span>&nbsp;Reply</span></div>
+                        <div class="infoArticle"><span class="glyphicon glyphicon-time">&nbsp;</span><span
+                                class="leftTime"></span><span class="leftTimeUnit">&nbsp;Minutes</span></div>
+                        <div class="infoArticle "><span class="glyphicon glyphicon-share-alt">&nbsp;</span><span
+                                class="lastReplay"></span><span>&nbsp;Minutes</span></div>
+                    </div>
+                </article>
+            </section>
+
+
+        </div>
+        <div class="col-sm-3 col-md-3" id="rightContent">
+            <section id="rightMain">
+                <div class="firstRightMain">
+                    <div class="titleRightSide">Categories<span class="fa fa-folder-o"></span></div>
+                    <hr>
+                    <div class="themeFirstRightMain">General<span class="square">3</span></div>
+                    <hr>
+                    <div class="themeFirstRightMain">Pictures<span class="square">1</span></div>
+                    <hr>
+                    <div class="themeFirstRightMain">Videos<span class="square">2</span></div>
+
+                </div>
+                <div class="secondRightMain">
+
+                    <div class="titleRightSide">Forum Statistic<span class="fa fa-bar-chart"></span></div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div><span class="fa fa-comments"></span></div>
+                            <div>Threads</div>
+                            <div>6</div>
+                        </div>
+                        <div class="col-md-4 col-sm-4" id="middleDivInSecondRightMain">
+                            <div><span class="fa fa-comments-o"></span></div>
+                            <div>Replies</div>
+                            <div>6</div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div><span class="fa fa-users"></span></div>
+                            <div>Members</div>
+                            <div>3</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="thirdRightMain">
+                    <div class="titleRightSide">Today's Events<span class="glyphicon glyphicon-bullhorn"></span></div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4" id="loginThirdRightMain">
+                            <div><span class="fa fa-sign-in"></span></div>
+                            <div>Logins</div>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <div>admin, moderator, user,</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-sm-1 col-md-1" id="rightSpace">
+            <div class="modal">
+                Modal
+                <form enctype="text/plain" id="newTopic">
+                    <div><label for="titleInput">Title</label><input id="titleInput" type="text"></div>
+                    <div><label for="category">category</label>
+                        <select id="category" type="text">
+                            <option value="General">General</option>
+                            <option value="Video">Video</option>
+                            <option value="Audio">Audio</option>
+                            <option value="Pictures">Pictures</option>
+                        </select>
+                    </div>
+                    <div><label for="brief">brief</label><input id="brief" type="text"></div>
+                    <button type="submit" id="submit">Send</button>
+                </form>
+            </div>
+            <div class="modModal">
+                modModal
+                <form enctype="text/plain" id="modTopic">
+                    <div><label for="titleInput">Title</label><input id="modTitleInput" value="" type="text"></div>
+                    <div><label for="category">category</label>
+                        <select id="modCategory" type="text">
+                            <option value="General">General</option>
+                            <option value="Video">Video</option>
+                            <option value="Audio">Audio</option>
+                            <option value="Pictures">Pictures</option>
+                        </select>
+                    </div>
+                    <div><label for="brief">brief</label><input id="modBrief" type="text" value=""></div>
+                    <button type="submit" id="modSubmit">Mod</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<footer id="footer">
+    <div class="col-sm-1 col-md-1"></div>
+    <div class="col-sm-10 col-md-10">
+
+        <div class="up">
+            <div class="left">
+                <ul>
+                    <li><a>About us</a></li>
+                    <li><a>Terms</a></li>
+                </ul>
+            </div>
+            <div class="right"><span class="fa fa-facebook-official"></span><span class="fa fa-twitter"></span></div>
+            <div class="clearfix"></div>
+        </div>
+        <hr/>
+        <div class="down">
+            <div class="left">
+                © 2015 SimpleForum - All Rights Reserved
+            </div>
+            <div class="right">Forum time: MYT(Asla/Kuala_Lumpur)</div>
+        </div>
+    </div>
+    <div class="col-sm-1 col-md-1"></div>
+</footer>
+
+
+<script src="script/index.js"></script>
+</body>
+</html>
