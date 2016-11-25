@@ -2,305 +2,188 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SimpleForum</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style/index.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 </head>
-<body class="flex jcc wrap">
-    <header class="flex aic jcc">
-        <div class="max-size flex aic jcs_b">
-            <span>Simple<b>Forum</b></span>
-            <div class="flex aic jce">
-                <div id="search">
-                    <input name="search" type="text" placeholder="Search" class="border-radius">
+<body>
+
+    <header class="container-fluid">
+        <div class="row content flex aic jcsb wrap">
+            <h1 class="col-sm-6">Simple<b>Forum</b></h1>
+            <div id="search-login" class="col-sm-6 flex jcfe aic">
+                <div id="search-bar" class="flex jcfe aic">
+                    <input name="search" placeholder="Search" class="border-radius">
                     <i class="glyphicon glyphicon-search"></i>
                 </div>
-                <button name="login">Login</button>
+                <button id="login" class="pull-right">Login</button>
             </div>
         </div>
     </header>
 
-    <div id="container" class="max-size flex jcs_b">
-        <div id="comments">
-
-            <div class="flex jcs_b wrap comment border-radius">
-                <div class="picture">
-                    <i class="fa fa-user"></i><br>
-                    <i class="fa fa-check"></i>
+    <div id="popup-new">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="new_title">Title:</label>
+                <div class="col-sm-8">
+                    <input id="new_title" class="form-control" name="title" type="text" placeholder="Title">
                 </div>
-                <div class="comm_body">
-                    <h1>quote of the day</h1>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="new_category">Category:</label>
+                <div class="col-sm-8">
+                    <input id="new_category" class="form-control" name="category" type="text" placeholder="Category">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="new_brief">Brief:</label>
+                <div class="col-sm-8">
+                    <textarea id="new_brief" class="form-control" name="brief" placeholder="Brief" rows="10"></textarea>
+                </div>
+            </div>
+            <button id="ok" class="border-radius col-sm-2">OK</button>
+        </form>
+    </div>
+
+    <div id="popup-modify">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="mod_title">Title:</label>
+                <div class="col-sm-8">
+                    <input id="mod_title" class="form-control" name="title" type="text" placeholder="Title">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="mod_category">Category:</label>
+                <div class="col-sm-8">
+                    <input id="mod_category" class="form-control" name="category" type="text" placeholder="Category">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="mod_brief">Brief:</label>
+                <div class="col-sm-8">
+                    <textarea id="mod_brief" class="form-control" name="brief" placeholder="Brief" rows="10"></textarea>
+                </div>
+            </div>
+            <button id="modify" class="border-radius col-sm-2">Modify</button>
+        </form>
+    </div>
+
+    <div id="add-topic" class="content">
+        <button id="new" class="border-radius">Add New Topic</button>
+    </div>
+
+    <div id="main" class="content row">
+        <div id="topics" class="col-lg-8 col-md-8 col-sm-8">
+            <div class="template topic flex aic jcsb content-box border-radius">
+            <div class="icons">
+                <div class="modify-delete">
+                    <i data-id="" title="Modify Topic" class="modify glyphicon glyphicon-cog"></i>
+                    <i data-id="" title="Delete Topic" class="delete glyphicon glyphicon-remove"></i>
+                </div>
+            </div>
+            <div class="profile-picture text-center">
+                <img src="technoviking.jpg">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="row" style="width:93%">
+                <div class="topic-body col-lg-9 col-md-12">
+                    <h1 class="title">quote of the day</h1>
                     <div class="time border-radius">
-                        <i class="fa fa-clock-o"></i> 09/10/2015 11:52 AM<span></span>
+                        <i class="fa fa-clock-o"></i> <span class="created">09/10/2015 11:52 AM</span>
                     </div>
                     <div class="type border-radius">
-                        <i class="fa fa-folder"></i><span> General</span>
+                        <i class="fa fa-folder"></i> <span class="category"> General</span>
                     </div>
-                    <p>Work hard for what you want because it won't come to you without a fight. You have to be strong and courageous and know...</p>
+                    <p class="brief">Work hard for what you want because it won't come to you without a fight. You have to be strong and courageous and know...</p>
                 </div>
-                <div class="flex aic wrap comm_stats">
-                    <div>
+                <div class="topic-stats col-lg-3 col-md-12 flex jcsb wrap" style="padding-top: 2em">
+                    <div class="topic-stats-item">
                         <i class="fa fa-eye"></i>
-                        <span> 10 View</span>
+                        <span class="views"> 10 View</span>
                     </div>
-                    <div>
+                    <div class="topic-stats-item">
                         <i class="fa fa-comments-o"></i>
-                        <span> 1 Reply</span>
+                        <span class="replies"> 1 Reply</span>
                     </div>
-                    <div>
+                    <div class="topic-stats-item">
                         <i class="fa fa-clock-o"></i>
-                        <span> 47 Minutes</span>
+                        <span class="last_view"> 47 Minutes</span>
                     </div>
-                    <div>
+                    <div class="topic-stats-item">
                         <i class="fa fa-mail-reply"></i>
-                        <span> 24 Minutes</span>
+                        <span class="last_comment"> 24 Minutes</span>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="flex jcs_b wrap comment border-radius">
-                <div class="picture">
-                    <i class="fa fa-user"></i><br>
-                    <i class="fa fa-check"></i>
-                </div>
-                <div class="comm_body">
-                    <h1>lorum ipsum test by member</h1>
-                    <div class="time border-radius">
-                        <i class="fa fa-clock-o"></i> 09/10/2015 11:45 AM<span></span>
-                    </div>
-                    <div class="type border-radius">
-                        <i class="fa fa-folder"></i><span> General</span>
-                    </div>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi...</p>
-                </div>
-                <div class="flex aic wrap comm_stats">
-                    <div>
-                        <i class="fa fa-eye"></i>
-                        <span> 4 View</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-comments-o"></i>
-                        <span> 1 Reply</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-clock-o"></i>
-                        <span> 54 Minutes</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-mail-reply"></i>
-                        <span> 24 Minutes</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex jcs_b wrap comment border-radius">
-                <div class="picture">
-                    <i class="fa fa-user"></i><br>
-                    <i class="fa fa-check"></i>
-                </div>
-                <div class="comm_body">
-                    <h1>kitchen sink test</h1>
-                    <div class="time border-radius">
-                        <i class="fa fa-clock-o"></i> 09/10/2015 11:40 AM<span></span>
-                    </div>
-                    <div class="type border-radius">
-                        <i class="fa fa-folder"></i><span> General</span>
-                    </div>
-                    <p>This tread is to test the html tags and other related data</p>
-                </div>
-                <div class="flex aic wrap comm_stats">
-                    <div>
-                        <i class="fa fa-eye"></i>
-                        <span> 3 View</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-comments-o"></i>
-                        <span> 1 Reply</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-clock-o"></i>
-                        <span> 59 Minutes</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-mail-reply"></i>
-                        <span> 58 Minutes</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex jcs_b wrap comment border-radius">
-                <div class="picture">
-                    <i class="fa fa-user"></i><br>
-                    <i class="fa fa-check"></i>
-                </div>
-                <div class="comm_body">
-                    <h1>food facts of plusealth</h1>
-                    <div class="time border-radius">
-                        <i class="fa fa-clock-o"></i> 09/10/2015 11:31 AM<span></span>
-                    </div>
-                    <div class="type border-radius">
-                        <i class="fa fa-folder"></i><span> Pictures</span>
-                    </div>
-                    <p>Food facts of plusHealth.com</p>
-                </div>
-                <div class="flex aic wrap comm_stats">
-                    <div>
-                        <i class="fa fa-eye"></i>
-                        <span> 21 View</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-comments-o"></i>
-                        <span> 1 Reply</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-clock-o"></i>
-                        <span> 1 Minutes</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-mail-reply"></i>
-                        <span> 1 Minutes</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex jcs_b wrap comment border-radius">
-                <div class="picture">
-                    <i class="fa fa-user"></i><br>
-                    <i class="fa fa-check"></i>
-                </div>
-                <div class="comm_body">
-                    <h1>beautiful videos</h1>
-                    <div class="time border-radius">
-                        <i class="fa fa-clock-o"></i> 09/10/2015 06:29 AM<span></span>
-                    </div>
-                    <div class="type border-radius">
-                        <i class="fa fa-folder"></i><span> Videos</span>
-                    </div>
-                    <p>The Most Beautiful Videos. That Make You Cry</p>
-                </div>
-                <div class="flex aic wrap comm_stats">
-                    <div>
-                        <i class="fa fa-eye"></i>
-                        <span> 2 View</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-comments-o"></i>
-                        <span> 1 Reply</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-clock-o"></i>
-                        <span> 18 Minutes</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-mail-reply"></i>
-                        <span> 18 Minutes</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex jcs_b wrap comment border-radius">
-                <div class="picture">
-                    <i class="fa fa-user"></i><br>
-                    <i class="fa fa-check"></i>
-                </div>
-                <div class="comm_body">
-                    <h1>man vs lion</h1>
-                    <div class="time border-radius">
-                        <i class="fa fa-clock-o"></i> 09/10/2015 06:20 AM<span></span>
-                    </div>
-                    <div class="type border-radius">
-                        <i class="fa fa-folder"></i><span> Videos</span>
-                    </div>
-                    <p>This is test video thread. The video is from youtube and the relative author contains the rights.</p>
-                </div>
-                <div class="flex aic wrap comm_stats">
-                    <div>
-                        <i class="fa fa-eye"></i>
-                        <span> 4 View</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-comments-o"></i>
-                        <span> 1 Reply</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-clock-o"></i>
-                        <span> 54 Minutes</span>
-                    </div>
-                    <div>
-                        <i class="fa fa-mail-reply"></i>
-                        <span> 24 Minutes</span>
-                    </div>
-                </div>
-            </div>
 
         </div>
 
-        <div id="info">
-
-            <div id="categories" class="stat-cont border-radius">
-                <div class="flex aic jcs_b header">
+        <div id="stats" class="col-lg-4 col-md-4 col-sm-4">
+            <div class="content-box stat-cont border-radius">
+                <div class="flex aic jcsb header">
                     <span><b>Categories</b></span>
                     <i class="fa fa-folder header-icon"></i>
                 </div>
-                <div id="general" class="flex aic jcs_b row-item">
+                <div class="flex aic jcsb row-item">
                     <span>General</span>
                     <div class="counter border-radius">
                         3
                     </div>
                 </div>
-                <div id="pictures" class="flex aic jcs_b row-item">
+                <div class="flex aic jcsb row-item">
                     <span>Pictures</span>
                     <div class="counter border-radius">
                         1
                     </div>
                 </div>
-                <div id="videos" class="flex aic jcs_b row-item-last">
+                <div class="flex aic jcsb row-item last">
                     <span>Videos</span>
                     <div class="counter border-radius">
                         2
                     </div>
                 </div>
             </div>
-
-            <div id="statistics" class="stat-cont border-radius info-item not-first">
-
-                <div class="flex aic jcs_b header">
+            <div class="content-box stat-cont border-radius">
+                <div class="flex aic jcsb header">
                     <span><b>Forum Statistics</b></span>
                     <i class="fa fa-bar-chart header-icon"></i>
                 </div>
-                <div class="flex jcs_b">
-                    <div class="column-item-equal">
+                <div class="flex jcsb text-center">
+                    <div class="column-item">
                         <i class="fa fa-comments"></i>
                         <p>Threads</p>
                         <p>6</p>
                     </div>
-                    <div class="column-item-equal center">
+                    <div class="column-item middle">
                         <i class="fa fa-comments-o"></i>
                         <p>Replies</p>
                         <p>6</p>
                     </div>
-                    <div class="column-item-equal">
+                    <div class="column-item">
                         <i class="fa fa-users"></i>
                         <p>Members</p>
                         <p>3</p>
                     </div>
                 </div>
             </div>
-
-            <div id="events" class="stat-cont border-radius info-item not-first">
-
-                <div class="flex aic jcs_b header">
+            <div class="content-box stat-cont border-radius">
+                <div class="flex aic jcsb header">
                     <span><b>Today's Events</b></span>
                     <i class="fa fa-bullhorn  header-icon"></i>
                 </div>
-                <div class="flex jcs_b">
-                    <div class="column-item-equal">
+                <div class="flex jcs_b text-center">
+                    <div class="column-item">
                         <i class="fa fa-sign-in smaller"></i>
                         <p>Logins</p>
                     </div>
-                    <div class="column-item-double">
+                    <div class="column-item double">
                         <p>admin, moderator, user</p>
                     </div>
                 </div>
@@ -308,9 +191,9 @@
         </div>
     </div>
 
-    <footer class="flex aic jcc wrap">
-        <div id="up" class="max-size flex aic jcs_b">
-            <div class="flex jcs_b">
+    <footer class="container-fluid">
+        <div id="up" class="content flex aic jcsb">
+            <div class="flex jcsb">
                 <span>&bull; About us</span>
                 <span id="terms">&bull; Terms</span>
             </div>
@@ -319,7 +202,7 @@
                 <i class="fa fa-twitter"></i>
             </div>
         </div>
-        <div class="max-size flex aic jcs_b">
+        <div class="content flex aic jcsb">
             <div>
                 &copy; 2015 SimpleForum - All Right Reserved
             </div>
@@ -328,5 +211,7 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="script/index.js"></script>
 </body>
 </html>

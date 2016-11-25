@@ -13,8 +13,19 @@ $header-border: #0797c7;
 
 }
 
-.max-size{
-  width: 1150px;
+html {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: $body-background;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .flex {
@@ -27,7 +38,17 @@ $header-border: #0797c7;
   -webkit-align-items: center;
 }
 
-.jcs_b {
+.wrap {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.jcsa {
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+
+.jcsb {
   justify-content: space-between;
   -webkit-justify-content: space-between;
 }
@@ -37,167 +58,202 @@ $header-border: #0797c7;
   -webkit-justify-content: center;
 }
 
-.jce {
+.jcfs {
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+
+.jcfe {
   justify-content: flex-end;
   -webkit-justify-content: flex-end;
 }
 
-.wrap {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+.content {
+  margin: 0 auto;
+  max-width: 1150px;
 }
 
 .border-radius {
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
-body {
+button {
+  background-color: $theme-color;
+  border: none;
+  color: $white;
+  font-weight: bold;
+}
 
-  background-color: $body-background;
-  margin: 0;
-
-  header {
-    background-color: $theme-color;
-    color: $white;
-    font-family: 'Open Sans', sans-serif;
-    width: 100%;
-    span {
-      font-size: 2em;
-      font-style: italic;
+header {
+  background-color: $theme-color;
+  color: $white;
+  h1 {
+    font: {
+      family: 'Open Sans', sans-serif;
+      size: 2em;
+      style: italic;
     }
-
-    #search {
+    margin: auto;
+    padding: 0;
+  }
+  #search-login {
+    margin: auto;
+    #search-bar {
+      width: 90%;
+    }
+    input {
+      width: 100%;
       position: relative;
-      input {
-        background-color: $input-background;
-        border: 1px solid $input-border;
-        padding: 6px 30px 6px 10px;
-        position: relative;
-        &:-moz-placeholder, &:-ms-input-placeholder {
-          color: $white;
-        }
-        &::-webkit-input-placeholder {
-          color: $white;
-        }
+      background-color: $input-background;
+      border: 1px solid $input-border;
+      padding: .5em 30px .5em .5em;
+      &:-ms-input-placeholder, &:-moz-placeholder {
+        color: $white;
       }
-      .glyphicon {
-        position: absolute;
-        padding: 10px;
-        right: 0px;
+      &::-webkit-input-placeholder {
+        color: $white;
       }
     }
+    .glyphicon {
+      position: relative;
+      right: 30px;
+    }
   }
+}
 
-  button{
-    background-color: $theme-color;
-    border: none;
-    margin-left: 10px;
+#popup-new, #popup-modify {
+  background-color: rgba(0,0,0,0.85);
+  color: $white;
+  display: none;
+  height: 100%;
+  width: 100%;
+  padding-top: 4em;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  input {
+    color: black;
   }
+  textarea{
+    color: black;
+  }
+  button {
+    position: relative;
+    left: 40%;
+    font-weight: bold;
+    padding: .5em;
+    margin: .5em;
+  }
+}
 
-  #container{
+#add-topic {
+  button {
+    margin: 1.25em 0 0 1em;
+    padding: .25em 1em;
+  }
+}
 
-    #comments {
-
-      .comment {
-        background-color: $white;
-        color: $grey;
-        margin: 1em 0;
-        width: 98%;
-
-        .picture {
-          width: 10%;
-
-          .fa-user {
-            font-size: 4em;
-            margin: .2em;
-            padding-bottom: .25em;
-            border-bottom: 1px solid $body-background;
-          }
-          .fa-check {
-            font-size: 1.5em;
-            margin: 0em 1.15em .55em;
-          }
+#main {
+  margin: 0 auto;
+  .content-box {
+    margin: 1em auto;
+    width: 100%;
+  }
+  #topics {
+    .template {
+      display: none;
+    }
+    .topic {
+      background-color: $white;
+      color: $grey;
+      position: relative;
+      .icons {
+        display: inline;
+        font-size: 1.25em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        .modify:hover{
+          color: #555;
+          cursor: pointer;
         }
-
-        .comm_body {
-          width: 75%;
-
-          h1 {
-            color: $theme-color;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin: .5em .5em .5em .25em;
+        .delete:hover {
+          color: red;
+          cursor: pointer;
+        }
+      }
+      .data {
+        border: 1px solid grey;
+      }
+      .profile-picture{
+        width: 10%;
+        img{
+          border-bottom: 1px solid $body-background;
+          padding: .25em;
+          width: 87.5%;
+        }
+        .fa-check {
+          font-size: 1.5em;
+          padding: .6em;
+        }
+      }
+      .topic-body {
+        padding: .5em .5em 0;
+        h1 {
+          color: $theme-color;
+          font-size: 1.5em;
+          font-weight: bold;
+          margin: 0 0 .25em;
+          text-transform: uppercase;
+        }
+        p {
+          margin: .5em .25em 0;
+          padding-right: .75em;
+          text-align: justify;
+          &:first-letter {
             text-transform: uppercase;
           }
-
-          p {
-            margin: 1em 1em .5em .5em;
-            text-align: justify;
-          }
-
-          .time, .type {
-            background-color: $theme-color;
-            color: $white;
-            font-size: .85em;
-            display: inline;
-            padding: .35em;
-          }
-          .time {
-            margin: 0em .25em 1em .75em;
-          }
-          .type {
-            margin-left: .25em;
-          }
         }
-
-        .comm_stats {
-          width: 15%;
-          border-left: 1px solid $body-background;
+        .time, .type {
+          background-color: $theme-color;
+          color: $white;
+          font-size: .85em;
+          display: inline;
+          padding: .35em;
+          text-transform: capitalize;
         }
-
-        &:first-child {
-          margin-top: 1em;
+        .created {
+          margin: .25em;
         }
-
-        &:last-child {
-          margin-bottom: 1em;
+        .type {
+          margin-left: .5em;
+        }
+      }
+      .topic-stats {
+        .topic-stats-item {
+          margin: 0;
+          padding: 0 .25em .25em;
         }
       }
     }
+  }
 
-    #info {
-      width: 34%;
-      &:last-child {
-        margin-bottom: 1em;
-      }
-      .stat-cont {
-        background-color: $theme-color;
-        color: $white;
-        margin-top: 1em;
-        .header {
-          border-bottom: 1px solid $header-border;
-          padding: 1.35em;
-        }
-      }
-      .header-icon {
-        color: $icon-blue;
-      }
+  #stats {
+    .stat-cont {
+      background-color: $theme-color;
+      color: $white;
       .row-item {
         padding: .5em 1.5em;
         border-bottom: 1px solid #0797c7;
       }
-      .row-item-last {
-        padding: .5em 1.5em 1.5em;
+      .last {
+        padding: .5em 1.5em 1.3em;
+        border: none;
       }
-      .counter {
-        background-color: $white;
-        color: $theme-color;
-        padding: 0 .35em;
-      }
-      .column-item-equal {
-        padding-bottom: 1.5em;
-        text-align: center;
-        width: 33%;
+      .column-item {
+        padding-bottom: 1em;
+        width:33%;
         .fa {
           color: $white;
           font-size: 3em;
@@ -212,38 +268,41 @@ body {
           margin: 0;
         }
       }
-      .column-item-double {
-        border-left: 1px solid $header-border;
-        padding-bottom: 1.5em;
-        text-align: center;
-        width: 66%;
-        p {
-          padding: .5em;
-          margin: 0;
+      .middle {
+        border:{
+          left: 1px solid $header-border;
+          right: 1px solid $header-border;
         }
       }
-      .center {
+      .double {
         border-left: 1px solid $header-border;
-        border-right: 1px solid $header-border;
+        width: 66%;
       }
-
+    }
+    .header {
+      border-bottom: 1px solid $header-border;
+      padding: 1em;
+    }
+    .header-icon {
+      color: $icon-blue;
+    }
+    .counter {
+      background-color: $white;
+      color: $theme-color;
+      padding: 0 .35em;
     }
   }
+}
 
-  footer {
-    background-color: $theme-color;
-    color: $white;
-    font-size: .8em;
-    padding: .3em;
-    width: 100%;
-
-    #terms{
-      margin-left: 10px;
-    }
-
-    #up {
-      border-bottom: 1px solid $white;
-    }
+footer {
+  background-color: $theme-color;
+  color: $white;
+  font-size: .8em;
+  padding: .3em;
+  #terms{
+    margin-left: 10px;
   }
-
+  #up {
+    border-bottom: 1px solid $white;
+  }
 }
