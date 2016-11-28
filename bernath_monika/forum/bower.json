@@ -1,20 +1,22 @@
 {
-  "name": "forum",
-  "description": "",
-  "main": "forum.js",
+  "name": "angular_gyak",
+  "homepage": "https://github.com/bmoni/gyakorlat",
   "authors": [
     "Bernath Monika <bernathm93@gmail.com>"
   ],
-  "license": "ISC",
-  "homepage": "https://github.com/bmoni/gyakorlat",
+  "description": "",
+  "main": "",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "app/bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
+    "angular": "angularjs#^1.5.9",
     "bootstrap": "^3.3.7"
   }
 }

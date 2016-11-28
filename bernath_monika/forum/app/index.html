@@ -1,144 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Forumtop">
 <head>
     <meta charset="UTF-8">
     <title>Forum</title>
-    <link href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet"/>
-    <link href="style/index.css" type="text/css" rel="stylesheet"/>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="style/index.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body ng-controller="first">
     <header>
         <span id="headbar">Simple<b>Forum</b></span>
         <div class="search_login">
             <input type="search" placeholder="Search" id="searchfield">
-            <span id="searchicon" class="glyphicon glyphicon-search"></span>
+            <span class="search glyphicon glyphicon-search"></span>
             <nav id="login">Login</nav>
         </div>
         <div class="clearfix"></div>
     </header>
+    <button class="button" ng-click="add()">Add Topic</button>
+    <div class="popup" ng-show="value">
+        <form class="form">
+            <input class="method" type="hidden"/>
+            Topic title:
+            <br>
+            <input ng-model="new.title" class="panel-title" type="text" name="panel-title">
+            Category:
+            <br>
+            <select ng-model="new.category" class="category" name="category">{{title.category}}
+                <option value="general" selected>General</option>
+                <option value="food" >Food</option>
+                <option value="lifestyle" >Lifestyle</option>
+            </select>
+            Comments text:
+            <br>
+            <textarea ng-model="new.brief" class="comments_text">{{title.brief}}</textarea>
+            <br>
+            <input class="submit" type="submit" value="Send" ng-click="newpost()" ng-class="method">
+        </form>
+    </div>
     <div id="container_for_everything">
         <div class="comments_container">
-            <div class="comments">
-                <div class="img_check">
-                    <img src="style/image.jpg" rel="image">
-                    <div class="fa fa-check"></div>
-                </div>
-                <div class="text">
-                    <div class="panel-title">QUOTE OF THE DAY</div>
-                    <div>
-                        <div class="fa fa-clock-o">09/10/2015 11:52 AM</div>
-                        <div class="fa fa-folder"> General</div>
+            <div ng-repeat="topic in topics">
+                <div class="comments">
+                    <div class="img_check">
+                        <img src="style/image.jpg" rel="image">
+                        <div class="fa fa-check"></div>
                     </div>
-                    <div class="comments_text">Work hard for what you want because it won't come to you without a fight. You have to be strong and courageous and know...</div>
-                </div>
-                <hr/>
-                <div class="info">
-                    <span class="fa fa-eye">10 View</span>
-                    <span class="fa fa-comments-o">1 Reply</span>
-                    <span class="fa fa-clock-o">47 Minutes</span>
-                    <span class="fa fa-mail-reply">24 Minutes</span>
-                </div>
-            </div>
-            <div class="comments">
-                <div class="img_check">
-                    <img src="style/image.jpg" rel="image">
-                    <div class="fa fa-check"></div>
-                </div>
-                <div class="text">
-                    <div class="panel-title">LORUM IPSUM TEST BY MEMBER</div>
-                    <div>
-                        <div class="fa fa-clock-o">09/10/2015 11:52 AM</div>
-                        <div class="fa fa-folder"> General</div>
+                    <div class="text">
+                        <div class="panel-title">{{topic.title}}</div>
+                        <div>
+                            <div class="created fa fa-clock-o">{{topic.created}}</div>
+                            <div class="category fa fa-folder">{{topic.category}}</div>
+                        </div>
+                        <div class="comments_text">{{topic.brief}}</div>
                     </div>
-                    <div class="comments_text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi...</div>
-                </div>
-                <div class="info">
-                    <span class="fa fa-eye">4 View</span>
-                    <span class="fa fa-comments-o">1 Reply</span>
-                    <span class="fa fa-clock-o">54 Minutes</span>
-                    <span class="fa fa-mail-reply">24 Minutes</span>
-                </div>
-            </div>
-            <div class="comments">
-                <div class="img_check">
-                    <img src="style/image.jpg" rel="image">
-                    <div class="fa fa-check"></div>
-                </div>
-                <div class="text">
-                    <div class="panel-title">KITCHEN SINK TEST</div>
-                    <div>
-                        <div class="fa fa-clock-o">09/10/2015 11:52 AM</div>
-                        <div class="fa fa-folder"> General</div>
+                    <hr/>
+                    <div class="info">
+                        <span class="views fa fa-eye">{{topic.views}}</span>
+                        <span class="reply fa fa-comments-o">{{topic.reply}}</span>
+                        <span class="lastWatch fa fa-clock-o">{{topic.lastWatch}}</span>
+                        <span class="feedback fa fa-mail-reply" >{{topic.feedback}}</span>
                     </div>
-                    <div class="comments_text">This thread is to test the html tags and other related data</div>
-                </div>
-                <div class="info">
-                    <span class="fa fa-eye">3 View</span>
-                    <span class="fa fa-comments-o">1 Reply</span>
-                    <span class="fa fa-clock-o">59 Minutes</span>
-                    <span class="fa fa-mail-reply">58 Minutes</span>
-                </div>
-            </div>
-            <div class="comments">
-                <div class="img_check">
-                    <img src="style/image.jpg" rel="image">
-                    <div class="fa fa-check"></div>
-                </div>
-                <div class="text">
-                    <div class="panel-title">FOOD FACTS OF PLUSEALTH</div>
-                    <div>
-                        <div class="fa fa-clock-o">09/10/2015 11:52 AM</div>
-                        <div class="fa fa-folder"> General</div>
-                    </div>
-                    <div class="comments_text">Food facts of plusHealth.com</div>
-                </div>
-                <div class="info">
-                    <span class="fa fa-eye">21 View</span>
-                    <span class="fa fa-comments-o">1 Reply</span>
-                    <span class="fa fa-clock-o">1 Hour</span>
-                    <span class="fa fa-mail-reply">1 Hour</span>
-                </div>
-            </div>
-            <div class="comments">
-                <div class="img_check">
-                    <img src="style/image.jpg" rel="image">
-                    <div class="fa fa-check"></div>
-                </div>
-                <div class="text">
-                    <div class="panel-title">BEAUTIFUL VIDEOS</div>
-                    <div>
-                        <div class="fa fa-clock-o">09/10/2015 11:52 AM</div>
-                        <div class="fa fa-folder"> General</div>
-                    </div>
-                    <div class="comments_text">Te Most Beautiful Videos, That May Make You Cry</div>
-                </div>
-                <div class="info">
-                    <span class="fa fa-eye">2 View</span>
-                    <span class="fa fa-comments-o">1 Reply</span>
-                    <span class="fa fa-clock-o">18 Hours</span>
-                    <span class="fa fa-mail-reply">18 Hours</span>
-                </div>
-            </div>
-            <div class="comments">
-                <div class="img_check">
-                    <img src="style/image.jpg" rel="image">
-                    <div class="fa fa-check"></div>
-                </div>
-                <div class="text">
-                    <div class="panel-title">MEN VS LION</div>
-                    <div>
-                        <div class="fa fa-clock-o">09/10/2015 11:52 AM</div>
-                        <div class="fa fa-folder"> General</div>
-                    </div>
-                    <div class="comments_text">This is a test video thread. The video is from youtube and the relateive authos contains the rights</div>
-                </div>
-                <div class="info">
-                    <span class="fa fa-eye">2 View</span>
-                    <span class="fa fa-comments-o">1 Reply</span>
-                    <span class="fa fa-clock-o">18 Hours</span>
-                    <span class="fa fa-mail-reply">18 Hours</span>
+                    <span class="remove glyphicon glyphicon-remove" ng-click="delete(topic.id)"></span>
+                    <span class="edit glyphicon glyphicon-edit" ng-click="edit(topic)"></span>
                 </div>
             </div>
         </div>
@@ -210,5 +135,7 @@
             <div>Forum Time: MYT(Asia/Kuala_Lumpur)</div>
         </div>
     </footer>
+    <script src="bower_components/angular/angular.js" type="text/javascript"></script>
+    <script src="script/index.js" type="text/javascript"></script>
 </body>
 </html>

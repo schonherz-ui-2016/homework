@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var server = require('gulp-express');
 
 gulp.task('sass', function () {
     return gulp.src('./app/style/**/*.scss')
@@ -13,4 +14,8 @@ gulp.task('sass:watch', function () {
     gulp.watch('./app/style/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass:watch']);
+gulp.task('server', function() {
+    server.run(['./app.js']);
+});
+
+gulp.task('default', ['sass:watch', 'server']);
