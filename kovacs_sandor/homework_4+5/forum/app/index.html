@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp" ng-controller="firstController">
 <head>
     <meta charset="UTF-8">
-    <title>forum</title>
+    <title>{{title}}</title>
+
+
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
     <link href="style/index.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 <div class="container-fluid">
@@ -35,59 +38,66 @@
     </header>
 </div>
 <div class="container">
+
     <div class="row">
         <div class="col-sm-1 col-md-1" id="leftSpace">
-            <button class="buttonModal">+</button>
-
+            <!--<button class="buttonModal" ng-click="displayModalSee()">+</button>-->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
+                    ng-click="openNewTopic()">New topic
+            </button>
         </div>
         <div class="col-sm-7 col-md-7" id="leftContent">
             <section id="leftMain">
+                <div ng-repeat="topic in topics">
+                    <article class="article template">
 
-
-                <article class="article template">
-
-                    <!--<div class="clearfix"></div>-->
-                    <div class="leftAuthor">
-                        <img src="images/userIcon.jpg" class="imageUser">
-                        <div><i class="glyphicon glyphicon-ok"></i></div>
-                    </div>
-                    <div class="contentArticle">
-                        <div class="titleArticle title">quote of the day</div>
-                        <div class="clearfix"></div>
-                        <div class="titleUnder">
-                            <p>
+                        <!--<div class="clearfix"></div>-->
+                        <div class="leftAuthor">
+                            <img src="images/userIcon.jpg" class="imageUser">
+                            <div><i class="glyphicon glyphicon-ok"></i></div>
+                        </div>
+                        <div class="contentArticle">
+                            <div class="titleArticle title">{{topic.title}}</div>
+                            <div class="clearfix"></div>
+                            <div class="titleUnder">
+                                <p>
                                 <span class="label label-primary"><span
-                                        class="glyphicon glyphicon-time"></span>&nbsp;<span class="created">09/10/2015 11:52 AM</span></span>
-                                <span class="label label-primary"><span
-                                        class="glyphicon glyphicon-folder-open">&nbsp;</span><span class="category"> General</span></span>
-                            </p>
+                                        class="glyphicon glyphicon-time"></span>&nbsp;<span class="created">{{topic.created}}</span></span>
+                                    <span class="label label-primary"><span
+                                            class="glyphicon glyphicon-folder-open">&nbsp;</span><span class="category">{{topic.category}}</span></span>
+                                </p>
+                            </div>
+                            <div class="comment brief">{{topic.brief}}</div>
                         </div>
-                        <div class="comment brief">Work hard for what you want because it won't come to you without a
-                            fight. You have to be strong and courageous and know...
-                        </div>
-                    </div>
 
-                    <div class="rightInfo">
-                        <div>
-                            <button class="deleteTopic" type="submit" id="delTopic">x</button>
+                        <div class="rightInfo">
+                            <div>
+                                <button class="deleteTopic" type="submit" id="delTopic"
+                                        ng-click="topicDelete(topic.id)">x
+                                </button>
+                            </div>
+                            <div>
+
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                        data-target="#myModal" ng-click="openTopic(topic)">Modify
+                                </button>
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="infoArticle "><span class="glyphicon glyphicon-eye-open">&nbsp;</span><span
+                                    class="views">{{topic.views}}</span> &nbsp;<span>View</span></div>
+                            <div class="infoArticle "><span class="fa fa-comments-o">&nbsp;&nbsp; </span><span
+                                    class="replay">{{topic.replay}}</span> <span>&nbsp;Reply</span></div>
+                            <div class="infoArticle"><span class="glyphicon glyphicon-time">&nbsp;</span><span
+                                    class="leftTime">{{topic.leftTime}} </span><span
+                                    class="leftTimeUnit">{{topic.leftTimeUnit}}</span></div>
+                            <div class="infoArticle "><span class="glyphicon glyphicon-share-alt">&nbsp;</span><span
+                                    class="lastReplay">{{topic.lastReplay}}</span><span> Minutes</span></div>
                         </div>
-                        <div>
-                            <button class="modButton" type="submit" id="modButton">mod</button>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="infoArticle "><span class="glyphicon glyphicon-eye-open">&nbsp;</span><span
-                                class="views"></span> &nbsp;<span>View</span></div>
-                        <div class="infoArticle "><span class="fa fa-comments-o">&nbsp;&nbsp; </span><span
-                                class="replay"></span> <span>&nbsp;Reply</span></div>
-                        <div class="infoArticle"><span class="glyphicon glyphicon-time">&nbsp;</span><span
-                                class="leftTime"></span><span class="leftTimeUnit">&nbsp;Minutes</span></div>
-                        <div class="infoArticle "><span class="glyphicon glyphicon-share-alt">&nbsp;</span><span
-                                class="lastReplay"></span><span>&nbsp;Minutes</span></div>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </section>
-
-
         </div>
         <div class="col-sm-3 col-md-3" id="rightContent">
             <section id="rightMain">
@@ -140,43 +150,13 @@
             </section>
         </div>
         <div class="col-sm-1 col-md-1" id="rightSpace">
-            <div class="modal">
-                Modal
-                <form enctype="text/plain" id="newTopic">
-                    <div><label for="titleInput">Title</label><input id="titleInput" type="text"></div>
-                    <div><label for="category">category</label>
-                        <select id="category" type="text">
-                            <option value="General">General</option>
-                            <option value="Video">Video</option>
-                            <option value="Audio">Audio</option>
-                            <option value="Pictures">Pictures</option>
-                        </select>
-                    </div>
-                    <div><label for="brief">brief</label><input id="brief" type="text"></div>
-                    <button type="submit" id="submit">Send</button>
-                </form>
-            </div>
-            <div class="modModal">
-                modModal
-                <form enctype="text/plain" id="modTopic">
-                    <div><label for="titleInput">Title</label><input id="modTitleInput" value="" type="text"></div>
-                    <div><label for="category">category</label>
-                        <select id="modCategory" type="text">
-                            <option value="General">General</option>
-                            <option value="Video">Video</option>
-                            <option value="Audio">Audio</option>
-                            <option value="Pictures">Pictures</option>
-                        </select>
-                    </div>
-                    <div><label for="brief">brief</label><input id="modBrief" type="text" value=""></div>
-                    <button type="submit" id="modSubmit">Mod</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <hr>
-</div>
 
+        </div>
+
+
+    </div>
+    <hr/>
+</div>
 
 <footer id="footer">
     <div class="col-sm-1 col-md-1"></div>
@@ -203,7 +183,70 @@
     <div class="col-sm-1 col-md-1"></div>
 </footer>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" ng-if="modify">Topic Modify</h4>
+                <h4 class="modal-title" ng-if="!modify">New topic</h4>
+            </div>
+            <div class="modal-body">
+                <form enctype="text/plain" id="newTopic" class="form-horizontal">
+                    <div class="form-group-lg">
+                        <label class="control-label col-lg-2 col-sm-2" for="titleInput">Title:</label>
+                        <div class="col-sm-10 col-lg-10">
+                            <input type="text" class="form-control" id="titleInput" placeholder="Title"
+                                   ng-model="newTopic.title">
+                        </div>
+                    </div>
+
+                    <div class="form-group-lg">
+                        <label class="control-label col-lg-2 col-sm-2" for="category">Category:</label>
+                        <div class="col-sm-10 col-lg-10">
+                            <select class="form-control" id="category" ng-model="newTopic.category">
+                                <option value="General" selected>General</option>
+                                <option value="Video">Video</option>
+                                <option value="Audio">Audio</option>
+                                <option value="Pictures">Pictures</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group-lg">
+                        <label class="control-label col-lg-2 col-sm-2" for="brief">Title:</label>
+                        <div class="col-sm-10 col-lg-10">
+                            <textarea type="text" class="form-control" id="brief" placeholder="Brief"
+                                      ng-model="newTopic.brief"></textarea>
+                        </div>
+                    </div>
+
+
+                    <button class="btn btn-default" ng-if="!modify" ng-click="addTopic()">New topic</button>
+                    <button class="btn btn-default" ng-if="modify" ng-click="modTopic()" id="modButton">Modify</button>
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Modal -->
+
+<script src="bower_components/angular/angular.js"></script>
 <script src="script/index.js"></script>
 </body>
 </html>
