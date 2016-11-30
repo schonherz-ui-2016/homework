@@ -26,12 +26,14 @@ header {
       size: 15px;
       width: 300px;
       height: 2.5em; }
-    header .search_login .search {
-      margin-left: -1.5em;
-      margin-right: 1.5em;
-      margin-top: 0.7em; }
     header .search_login #login {
       padding-top: .5em; }
+  header .search {
+    margin-left: -1.5em;
+    margin-right: 1.5em;
+    margin-top: 0.7em; }
+  header span.search:hover {
+    color: red; }
 
 .fa-check, .fa-comments-o, .fa-eye, .fa-mail-reply, .fa-clock-o, .fa-folder {
   color: #CBCDCE; }
@@ -66,7 +68,8 @@ header {
     color: #00a3d9;
     float: left;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 80%; }
     #container_for_everything .comments_container .comments {
       margin: 0 10px 10px;
       background-color: #fff;
@@ -77,7 +80,11 @@ header {
         margin: 1em 1em 13em 1em; }
       #container_for_everything .comments_container .comments .edit {
         margin: 1em 1em 13em 0; }
-      #container_for_everything .comments_container .comments span.remove:hover, #container_for_everything .comments_container .comments span.edit:hover, #container_for_everything .comments_container .comments span.search:hover {
+      #container_for_everything .comments_container .comments .vote {
+        margin: 1em 1em 13em 0;
+        display: flex;
+        flex-flow: column; }
+      #container_for_everything .comments_container .comments span.remove:hover, #container_for_everything .comments_container .comments span.edit:hover, #container_for_everything .comments_container .comments span.vote:hover {
         color: red; }
       #container_for_everything .comments_container .comments .img_check {
         float: left;

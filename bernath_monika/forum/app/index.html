@@ -22,6 +22,7 @@
     <div class="popup" ng-show="value">
         <form class="form">
             <input class="method" type="hidden"/>
+            <input class="new.numberOfVote" type="hidden"/>
             Topic title:
             <br>
             <input ng-model="new.title" class="panel-title" type="text" name="panel-title">
@@ -42,29 +43,7 @@
     <div id="container_for_everything">
         <div class="comments_container">
             <div ng-repeat="topic in topics">
-                <div class="comments">
-                    <div class="img_check">
-                        <img src="style/image.jpg" rel="image">
-                        <div class="fa fa-check"></div>
-                    </div>
-                    <div class="text">
-                        <div class="panel-title">{{topic.title}}</div>
-                        <div>
-                            <div class="created fa fa-clock-o">{{topic.created}}</div>
-                            <div class="category fa fa-folder">{{topic.category}}</div>
-                        </div>
-                        <div class="comments_text">{{topic.brief}}</div>
-                    </div>
-                    <hr/>
-                    <div class="info">
-                        <span class="views fa fa-eye">{{topic.views}}</span>
-                        <span class="reply fa fa-comments-o">{{topic.reply}}</span>
-                        <span class="lastWatch fa fa-clock-o">{{topic.lastWatch}}</span>
-                        <span class="feedback fa fa-mail-reply" >{{topic.feedback}}</span>
-                    </div>
-                    <span class="remove glyphicon glyphicon-remove" ng-click="delete(topic.id)"></span>
-                    <span class="edit glyphicon glyphicon-edit" ng-click="edit(topic)"></span>
-                </div>
+                <div topic="topic" on-edit="edit" on-delete="delete" on-vote="vote"></div>
             </div>
         </div>
         <div class="other_things_container">
@@ -137,5 +116,7 @@
     </footer>
     <script src="bower_components/angular/angular.js" type="text/javascript"></script>
     <script src="script/index.js" type="text/javascript"></script>
+    <script src="script/api.js" type="text/javascript"></script>
+    <script src="script/topic.js" type="text/javascript"></script>
 </body>
 </html>
