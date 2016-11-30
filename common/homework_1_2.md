@@ -1,13 +1,3 @@
-## Homework
-
-# 1.1
-A feladat egy olyan HTML oldal elkeszitese, amelyben egy formot hozol letre. Ezzel a formmal a kovetkezo adatokat
-kuldheted el:
-nickname (minimum 3 karakter), first name, last name, date of birth
-A form a http://localhost:3000/ URL-re hivatkozzon es post request-tel kommunikaljon! Termeszetesen legyen egy gomb is,
-amellyel el lehet kuldeni a formot!
-
-# 1.2
 A feladat egy olyan HTML oldal elkeszitese, amelyben egy novemberi naptarat hozol letre tablazatos formaban. A naptar
 cime "2016 November" legyen! Az oszlopok nevei a hét napjaival egyezzenek meg (hetfovel kezdodjon)! Ebben a honapban
 csak 1-je az unnepnap. Ez a nap legyen vastagon szedett, es ha fele viszed az egerkurzort, akkor jelenjen meg a
@@ -27,8 +17,3 @@ X vilagnapja, stb.). Lentebb talalhato egy pelda, hogy korulbelul hogyan kellene
 | 14    | 15   | 16     | 17        | 18     | 19      | 20       |
 | 21    | 22   | 23     | 24        | 25     | 26      | 27       |
 | 28    | 29   | 30     |           |        |         |          |
-
-
-# 2
-Csatolva lett a hazi2.jpg kep, amelyben egy HTML oldalt abrazol nagyon keves CSS formazassal. A feladatod, hogy csinalj
-egy hasonlo HTML oldalt, es keszits melle ket CSS fajlt is, melyek kulonbozo megjelenest adnak az oldalnak.
