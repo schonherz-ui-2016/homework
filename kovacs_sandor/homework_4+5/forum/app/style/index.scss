@@ -21,16 +21,16 @@ body {
   background-color: $bodyBackground-color;
 }
 
-.button.btn.btn-info.btn-lg{
+.button.btn.btn-info.btn-lg {
   padding: 0px;
 }
 
-.btn-lg{
+.btn-lg {
   padding: 0px 2px 0px;
 }
 
 button {
-  margin:-1px;
+  margin: -1px;
 }
 
 .btn-default {
@@ -64,20 +64,20 @@ button {
   float: right;
 }
 
-.fa-cogs{
+.fa-cogs {
   display: none;
   border: none;
   background-color: white;
-  :hover{
-    background-color:$headerBasic-color
+  :hover {
+    background-color: $headerBasic-color
   }
 }
 
-.fa-window-close-o{
+.fa-window-close-o {
   display: none;
   border: none;
   background-color: white;
-  :hover{
+  :hover {
     background-color: red;
   }
 }
@@ -106,7 +106,7 @@ button {
   }
 }
 
-.glyphicon-thumbs-up{
+.glyphicon-thumbs-up {
   padding: 1px 0px;
   border: none;
   background-color: white;
@@ -122,7 +122,7 @@ button {
   left: -13px;
 }
 
-.glyphicon-time{
+.glyphicon-time {
   margin-right: -4px;
 }
 
@@ -211,6 +211,7 @@ div.infoArticle {
 #loginThirdRightMain {
   border-right: solid 1px white;
 }
+
 .glyphicon-ok {
   padding-top: 1em;
   padding-left: 1em;

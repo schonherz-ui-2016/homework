@@ -10,7 +10,7 @@ var apiService = function ($http) {
      * @param {Number}id
      * @returns {Promise.<Object>}
      */
-    this.deleteTopic = function(id) {
+    this.deleteTopic = function (id) {
         return $http.delete('/topics/' + id);
     };
 
@@ -18,7 +18,7 @@ var apiService = function ($http) {
      * @param {Object}topic
      * @returns {Promise.<Object>}
      */
-    this.editTopic = function(topic) {
+    this.editTopic = function (topic) {
         var id = topic.id;
         return $http.put('/topics/' + id, topic);
     };
@@ -27,7 +27,7 @@ var apiService = function ($http) {
      * @param {Object} topic
      * @returns {Promise.<Object>}
      */
-    this.newTopic = function(topic) {
+    this.newTopic = function (topic) {
         return $http.post('/topics', topic);
     };
 
