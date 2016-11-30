@@ -1,0 +1,48 @@
+<article class="article template">
+    <div class="leftAuthor">
+        <img src="images/userIcon.jpg" class="imageUser">
+        <div><i class="glyphicon glyphicon-ok"></i></div>
+    </div>
+    <div class="contentArticle">
+        <div class="titleArticle title">{{topic().title}}</div>
+        <div class="clearfix"></div>
+        <div class="titleUnder">
+            <p>
+                <span class="label label-primary"><span class="glyphicon glyphicon-time"></span>&nbsp;
+                    <span class="created">{{topic().created}}</span>
+                </span>
+                <span class="label label-primary"><span class="glyphicon glyphicon-folder-open">&nbsp;</span>
+                    <span class="category">{{topic().category}}</span>
+                </span>
+            </p>
+        </div>
+        <div class="comment brief">{{topic().brief}}</div>
+    </div>
+    <div class="rightInfo">
+        <div>
+            <button class="deleteTopic fa fa-window-close-o" type="submit" id="delTopic"
+                    ng-click="topicDelete(topic().id)">
+            </button>
+        </div>
+        <div>
+            <button class="fa fa-cogs" data-toggle="modal"
+                    data-target="#myModal" ng-click="openTopic(topic())">
+            </button>
+        </div>
+        <div class="clearfix"></div>
+        <div class="infoArticle "><span class="glyphicon glyphicon-eye-open">&nbsp;</span><span
+                class="views">{{topic().views}}</span> &nbsp;<span>View</span></div>
+        <div class="infoArticle "><span class="fa fa-comments-o">&nbsp;&nbsp; </span><span
+                class="replay">{{topic().replay}}</span> <span>&nbsp;Reply</span></div>
+        <div class="infoArticle"><span class="glyphicon glyphicon-time">&nbsp;</span><span
+                class="leftTime">{{topic().leftTime}} </span><span
+                class="leftTimeUnit">{{topic().leftTimeUnit}}</span></div>
+        <div class="infoArticle "><span class="glyphicon glyphicon-share-alt">&nbsp;</span><span
+                class="lastReplay">{{topic().lastReplay}}</span><span> Minutes</span></div>
+        <div class="infoArticle ">
+            <button class="glyphicon glyphicon-thumbs-up" ng-click="likeCount(topic())">&nbsp;</button>
+            <span class="lastReplay">{{topic().like}}</span><span> Likes</span>
+        </div>
+    </div>
+</article>
+
