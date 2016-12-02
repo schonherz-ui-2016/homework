@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="newmod">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="style/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i" rel="stylesheet" />
+    </head>
+
+    <body ng-controller="first">
+    <header>
+        <div class="container">
+            <p>Simple<b>Forum</b></p>
+            <div class="col-xs-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button></span>
+                </div>
+                <a>Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="topic-container col-xs-8">
+            <div ng-repeat="topic in topics">
+                <div topic="topic" on-edit="modifytop" on-delete="deletetop" on-inc="incrementer" on-dec="decrementer">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+
+            <div class="panel panel-default">
+                <div class="panel panel-heading">Categories<i class="fa fa-folder"></i></div>
+                <div class="panel panel-body"><a>General</a><span>3</span></div>
+                <div class="panel panel-body"><a>Pictures</a><span>1</span></div>
+                <div class="panel panel-body"><a>Videos</a><span>2</span></div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel panel-heading">Forum Statistics<span class="fa fa-bar-chart"></span></div>
+                <div>
+                    <div class="panel panel-body"><span class="fa fa-comments"></span><span>Threads</span><span>6</span></div>
+                    <div class="panel panel-body"><span class="fa fa-comments-o"></span><span>Replies</span><span>6</span></div>
+                    <div class="panel panel-body"><span class="fa fa-users"></span><span>Members</span><span>3</span></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel panel-heading">Today's Events<span class="fa fa-bullhorn"></span></div>
+                <div>
+                    <div class="panel panel-body"><span class="fa fa-sign-in"></span>Logins</div>
+                    <div class="panel panel-body">admins, moderators, user</div>
+                </div>
+            </div>
+
+            <div class="addTopic">
+                <button ng-click="modifytop({})">Add new topic</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" ng-show="popupVisible">
+        <div id="topicform">
+            <div id="form">
+                <form>
+                    <label for="title">Topic title</label><br>
+                    <input id="title" ng-model="topic.title"><br>
+                    <label for="brief">Topic brief</label><br>
+                    <textarea id="brief" ng-model="topic.brief"></textarea><br>
+                    <label for="cat">Select category:</label>
+                    <select id="cat" ng-model="topic.category">
+                        <option>General</option>
+                        <option>Pictures</option>
+                        <option>Videos</option>
+                    </select><br>
+                    <button id="sendform" ng-click="sendtopic()">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="fter">
+            <div class="fter-pt1">
+                <div class="about">
+                    <ul>
+                        <li><a>About us</a></li>
+                        <li><a>Terms</a></li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <a><span class="fa fa-facebook-official"></span></a>
+                    <a><span class="fa fa-twitter"></span></a>
+                </div>
+            </div>
+            <hr>
+            <div class="fter-pt2">
+                <div class="rights">&copy; 2015 SimpleForum - All Rights Reserved</div>
+                <div class="ftime">Forum Time: MYT (Asia/Kuala_Lumpur)</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/api.js"></script>
+    <script src="script/topic.js"></script>
+    </body>
+</html>

@@ -1,0 +1,207 @@
+@charset "UTF-8";
+body {
+  background-color: #e6e6e6; }
+  body header {
+    background-color: #0099d9;
+    height: 70px; }
+    body header .container {
+      display: flex;
+      justify-content: space-between; }
+      body header .container a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 25px; }
+      body header .container .col-xs-3 {
+        padding-top: 15px;
+        display: flex; }
+        body header .container .col-xs-3 button {
+          background-color: #00b3ee;
+          border: 1px solid #00b3ee;
+          color: white; }
+        body header .container .col-xs-3 ::-webkit-input-placeholder {
+          /* WebKit, Blink, Edge */
+          color: #8ED6ED; }
+        body header .container .col-xs-3 :-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+          color: #8ED6ED;
+          opacity: 1; }
+        body header .container .col-xs-3 ::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+          color: #8ED6ED;
+          opacity: 1; }
+        body header .container .col-xs-3 :-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: #8ED6ED; }
+    body header p {
+      color: white;
+      font-size: 30px;
+      font-style: oblique;
+      font-family: 'Open Sans', sans-serif;
+      margin: 10px; }
+    body header .form-control {
+      background-color: #00b3ee;
+      border: 1px solid #00b3ee;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      color: white; }
+  body .container {
+    display: flex;
+    justify-content: space-around; }
+  body .topic {
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: white;
+    display: flex;
+    margin: 10px;
+    padding: 20px 0px 20px 20px; }
+    body .topic .tpc {
+      padding: 0px 10px 0px 60px;
+      width: 75%; }
+      body .topic .tpc div {
+        display: flex;
+        justify-content: flex-start; }
+        body .topic .tpc div p {
+          border: 1px solid #0099d9;
+          border-radius: 2px;
+          background-color: #0099d9;
+          margin: 2px;
+          padding: 2px;
+          color: white;
+          font-weight: bold;
+          font-size: smaller; }
+    body .topic h4 {
+      color: #0099d9;
+      text-transform: uppercase;
+      font-weight: bold; }
+    body .topic .desc {
+      color: #a6a6a6;
+      padding-top: 5px; }
+    body .topic .stats {
+      display: flex;
+      flex-direction: column;
+      color: #a6a6a6; }
+      body .topic .stats .fa {
+        padding: 5px 0px; }
+    body .topic .glyphicon-user {
+      float: left; }
+    body .topic .usr-ico {
+      background-image: url("user.png");
+      width: 50px;
+      height: 51px;
+      position: absolute; }
+    body .topic .fa-check {
+      position: relative;
+      top: 85px;
+      left: 20px;
+      color: #a6a6a6; }
+    body .topic .vote {
+      display: flex;
+      flex-direction: column;
+      color: #a6a6a6;
+      font-weight: bold; }
+      body .topic .vote i {
+        padding: 20px;
+        font-size: x-large; }
+      body .topic .vote div {
+        padding: 0px 22px; }
+      body .topic .vote .upvotes {
+        color: green;
+        font-weight: bold; }
+      body .topic .vote .downvotes {
+        color: red;
+        font-weight: bold; }
+  body .template {
+    display: none; }
+  body #popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000; }
+    body #popup #form {
+      display: flex;
+      justify-content: center;
+      color: white; }
+      body #popup #form label, body #popup #form input, body #popup #form textarea, body #popup #form button {
+        color: #0099d9; }
+      body #popup #form select option {
+        color: #0099d9; }
+  body .col-xs-4 {
+    margin-top: 10px;
+    color: white; }
+    body .col-xs-4 :first-child .panel-body span {
+      float: right;
+      border: 1px solid white;
+      border-radius: 2px;
+      background-color: white;
+      padding: 0px 10px;
+      margin-right: 10px;
+      color: #0099d9;
+      font-weight: bold; }
+    body .col-xs-4 :nth-child(2) :nth-child(2) {
+      display: flex;
+      justify-content: space-around; }
+      body .col-xs-4 :nth-child(2) :nth-child(2) .fa {
+        font-size: 40px;
+        padding: 10px; }
+      body .col-xs-4 :nth-child(2) :nth-child(2) div {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        body .col-xs-4 :nth-child(2) :nth-child(2) div span:last-child {
+          font-weight: bold;
+          padding: 10px; }
+    body .col-xs-4 :nth-child(3) :nth-child(2) {
+      display: flex;
+      justify-content: space-around; }
+      body .col-xs-4 :nth-child(3) :nth-child(2) .fa {
+        font-size: 40px; }
+      body .col-xs-4 :nth-child(3) :nth-child(2) div {
+        display: flex;
+        flex-direction: column; }
+    body .col-xs-4 .panel-heading {
+      border: 1px solid #0099d9;
+      color: white;
+      font-weight: bold;
+      line-height: 4;
+      display: flex;
+      justify-content: space-between; }
+      body .col-xs-4 .panel-heading i, body .col-xs-4 .panel-heading span {
+        padding: 20px;
+        color: #4dd2ff;
+        font-size: large; }
+    body .col-xs-4 .panel {
+      background-color: #0099d9; }
+      body .col-xs-4 .panel a {
+        color: white;
+        text-decoration: none; }
+    body .col-xs-4 .addTopic {
+      color: #a6a6a6; }
+  body footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0099d9;
+    height: 90px;
+    color: white; }
+    body footer a {
+      color: white; }
+    body footer .fter {
+      width: 60%; }
+    body footer hr {
+      margin: 0; }
+    body footer .fter-pt1, body footer .fter-pt2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px; }
+      body footer .fter-pt1 ul, body footer .fter-pt2 ul {
+        padding: 0; }
+        body footer .fter-pt1 ul li, body footer .fter-pt2 ul li {
+          display: inline;
+          padding-left: 5px; }
+          body footer .fter-pt1 ul li :before, body footer .fter-pt2 ul li :before {
+            content: '• '; }
+          body footer .fter-pt1 ul li a, body footer .fter-pt2 ul li a {
+            text-decoration: none; }

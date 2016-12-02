@@ -1,0 +1,27 @@
+<div class="topic">
+    <span class="usr-ico"></span>
+    <span class="fa fa-check"></span>
+    <div class="tpc">
+        <h4>{{topic().title}}</h4>
+        <div>
+            <p><span class="fa fa-clock-o"></span>{{topic().created}}</p>
+            <p><i class="fa fa-folder"></i>{{topic().category}}</p>
+        </div>
+        <p class="desc">{{topic().brief}}</p>
+    </div>
+    <span class="stats">
+        <span class="fa fa-eye"> 10 view</span>
+        <span class="fa fa-comments-o"> 1 reply</span>
+        <span class="fa fa-clock-o"> 47 minutes</span>
+        <span class="fa fa-mail-reply"> 24 minutes</span>
+        <div>
+            <i class="fa fa-times" ng-click="onDelete(topic().id)"></i>
+            <i class="fa fa-wrench" ng-click="onEdit(topic())"></i>
+        </div>
+    </span>
+    <div class="vote">
+        <i class="fa fa-hand-o-up" ng-click="onInc(topic())"></i>
+        <div ng-class="{'upvotes': topic().vote > 0, 'downvotes': topic().vote < 0}">{{topic().vote}}</div>
+        <i class="fa fa-hand-o-down" ng-click="onDec(topic())"></i>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "angular_forum",
+  "authors": [
+    "Marton Krisztian Zsolt <krisztianm@mailbox.unideb.hu>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "bootstrap": "^3.3.7"
+  }
+}
