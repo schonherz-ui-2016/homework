@@ -1,0 +1,345 @@
+body {
+  background-color: #f2f2f2;
+  color: #b3b3b3;
+  font-size: 16px; }
+  body .blur {
+    font-size: 18px;
+    opacity: 0.5; }
+  body .buttons {
+    display: flex;
+    justify-content: space-between; }
+  body .large {
+    font-size: 48px; }
+  body .target {
+    background-color: #00b3ee;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 3px 0 10px 3px;
+    padding: 5px; }
+  body .delete {
+    background-color: #00b3ee;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px; }
+  body .edit {
+    background-color: #00b3ee;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px; }
+  body .vote {
+    background-color: #00b3ee;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px; }
+  body #medium {
+    font-size: 28px; }
+  body footer {
+    color: white;
+    background-color: #3399ff;
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    padding: 12px 180px 0;
+    width: 100%;
+    z-index: 1; }
+    body footer > div {
+      display: flex;
+      justify-content: space-between; }
+      body footer > div:first-child > div:last-child i:first-child {
+        margin-right: 12px; }
+      body footer > div:last-child {
+        border-top: 1px solid white;
+        padding-top: 12px; }
+    body footer ul {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 15px; }
+      body footer ul li:first-child {
+        margin-right: 24px; }
+  body header {
+    align-items: center;
+    background-color: #3399ff;
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+    padding: 20px 180px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+    body header > div {
+      align-items: center;
+      display: flex;
+      justify-content: space-between; }
+      body header > div > button {
+        background-color: #3399ff;
+        border: none;
+        color: white;
+        margin-left: 10px; }
+      body header > div > div {
+        align-items: center;
+        background-color: #00b3ee;
+        border-radius: 5px; }
+        body header > div > div > button {
+          background-color: #00b3ee;
+          border: none;
+          color: white;
+          height: 35px;
+          margin: 0 10px 0; }
+    body header input {
+      background-color: #00b3ee;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      padding: 14px; }
+      body header input::-webkit-input-placeholder {
+        color: white; }
+    body header p {
+      color: white;
+      font-size: 25px;
+      font-style: italic; }
+  body section {
+    display: flex;
+    flex-direction: column;
+    margin: 110px 0 60px 0;
+    padding: 0 180px 0; }
+  body:nth-child(2) #alertBox {
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    font-size: 20px;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 100; }
+    body:nth-child(2) #alertBox > div {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 160px;
+      padding: 10px;
+      width: 250px; }
+      body:nth-child(2) #alertBox > div button {
+        background-color: #3399ff;
+        align-self: flex-end; }
+      body:nth-child(2) #alertBox > div > div {
+        display: flex;
+        justify-content: space-between; }
+        body:nth-child(2) #alertBox > div > div:nth-child(2) {
+          background-color: #00b3ee;
+          border: none;
+          border-radius: 5px;
+          color: black;
+          font-size: 14px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          padding: 5px; }
+  body:nth-child(2) #popUp {
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 100; }
+    body:nth-child(2) #popUp button {
+      background-color: #3399ff;
+      border: none;
+      border-radius: 5px;
+      color: black;
+      font-weight: bold;
+      margin-top: 5px; }
+    body:nth-child(2) #popUp form {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 35px;
+      padding: 10px;
+      width: 350px; }
+      body:nth-child(2) #popUp form label {
+        margin-top: 6px; }
+      body:nth-child(2) #popUp form > textarea {
+        resize: none; }
+      body:nth-child(2) #popUp form > div {
+        display: flex;
+        justify-content: space-between; }
+        body:nth-child(2) #popUp form > div > p {
+          align-self: center;
+          font-weight: bold; }
+      body:nth-child(2) #popUp form .cancel {
+        margin-bottom: 25px;
+        right: 0;
+        top: 0; }
+      body:nth-child(2) #popUp form #category {
+        align-self: center; }
+      body:nth-child(2) #popUp form #submit {
+        align-self: center;
+        margin-top: 20px; }
+      body:nth-child(2) #popUp form #warning {
+        color: red;
+        margin: 15px 0 0; }
+    body:nth-child(2) #popUp input, body:nth-child(2) #popUp textarea {
+      border-radius: 5px;
+      color: black;
+      margin: 5px; }
+    body:nth-child(2) #popUp span {
+      font-weight: bold; }
+    body:nth-child(2) #popUp select {
+      margin: 5px; }
+    body:nth-child(2) #popUp select, body:nth-child(2) #popUp option {
+      color: black; }
+  body .flex {
+    display: flex;
+    justify-content: center; }
+    body .flex > div:first-child {
+      display: flex;
+      flex-direction: column;
+      margin-right: 24px;
+      width: 1800px; }
+      body .flex > div:first-child > div > div {
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 16px; }
+        body .flex > div:first-child > div > div > div {
+          display: flex;
+          justify-content: space-between; }
+          body .flex > div:first-child > div > div > div i {
+            border-top: 1px solid #d9d9d9;
+            font-size: 18px;
+            margin-top: 18px;
+            padding: 24px 24px 5px 24px; }
+          body .flex > div:first-child > div > div > div:last-child {
+            border-left: 1px solid #d9d9d9;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            justify-content: space-around;
+            padding-left: 12px;
+            white-space: nowrap; }
+          body .flex > div:first-child > div > div > div > div:first-child {
+            display: flex;
+            justify-content: space-between; }
+            body .flex > div:first-child > div > div > div > div:first-child > div {
+              display: flex;
+              flex-direction: column; }
+              body .flex > div:first-child > div > div > div > div:first-child > div:first-child {
+                margin-right: 10px; }
+              body .flex > div:first-child > div > div > div > div:first-child > div p {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 0;
+                text-align: center;
+                white-space: nowrap; }
+          body .flex > div:first-child > div > div > div > div:nth-child(2) {
+            margin: 0 12px 0 12px; }
+            body .flex > div:first-child > div > div > div > div:nth-child(2) > p:first-child {
+              color: #00b3ee;
+              font-size: 22px;
+              font-weight: bold; }
+            body .flex > div:first-child > div > div > div > div:nth-child(2) > p:last-child {
+              font-size: 18px;
+              width: 400px;
+              overflow-wrap: break-word; }
+            body .flex > div:first-child > div > div > div > div:nth-child(2) > div {
+              display: flex;
+              justify-content: flex-start;
+              margin: 8px 0 8px 0; }
+              body .flex > div:first-child > div > div > div > div:nth-child(2) > div p {
+                background-color: #00b3ee;
+                border-radius: 5px;
+                color: white;
+                font-size: 14px;
+                padding: 5px 10px 5px;
+                white-space: nowrap; }
+                body .flex > div:first-child > div > div > div > div:nth-child(2) > div p:first-child {
+                  margin-right: 5px; }
+          body .flex > div:first-child > div > div > div > div:last-child p {
+            margin: 8px 0 8px 0; }
+    body .flex > div:last-child > div {
+      color: white;
+      background-color: #0099ff;
+      border-radius: 5px;
+      float: left;
+      font-size: 15px;
+      margin: 3px 3px 5px 3px;
+      padding: 20px;
+      width: 300px; }
+      body .flex > div:last-child > div:first-child {
+        display: flex;
+        flex-direction: column; }
+        body .flex > div:last-child > div:first-child > div {
+          display: flex;
+          justify-content: space-between; }
+          body .flex > div:last-child > div:first-child > div:nth-child(n + 2) {
+            border-top: 1px solid #8c8c8c;
+            padding-top: 8px; }
+            body .flex > div:last-child > div:first-child > div:nth-child(n + 2) span {
+              background-color: white;
+              border-radius: 3px;
+              color: #0099ff;
+              font-weight: bold;
+              margin: 8px 0 8px 8px;
+              padding: 2px 6px 2px; }
+      body .flex > div:last-child > div:nth-child(2) > div:first-child {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px; }
+      body .flex > div:last-child > div:nth-child(2) > div:nth-child(2) {
+        border-top: 1px solid #8c8c8c;
+        display: flex;
+        justify-content: space-between; }
+        body .flex > div:last-child > div:nth-child(2) > div:nth-child(2) > div {
+          text-align: center;
+          padding: 12px 16px; }
+          body .flex > div:last-child > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+            border-left: 1px solid #8c8c8c;
+            border-right: 1px solid #8c8c8c; }
+          body .flex > div:last-child > div:nth-child(2) > div:nth-child(2) > div > p {
+            margin-top: 10px; }
+      body .flex > div:last-child > div:nth-child(3) > div:first-child {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px; }
+      body .flex > div:last-child > div:nth-child(3) > div:nth-child(2) {
+        border-top: 1px solid #8c8c8c;
+        display: flex;
+        justify-content: flex-start; }
+        body .flex > div:last-child > div:nth-child(3) > div:nth-child(2) > div:first-child {
+          border-right: 1px solid #8c8c8c;
+          padding: 25px;
+          text-align: center; }
+          body .flex > div:last-child > div:nth-child(3) > div:nth-child(2) > div:first-child p {
+            margin-top: 10px; }
+        body .flex > div:last-child > div:nth-child(3) > div:nth-child(2) > div:last-child > p {
+          margin: 15px 0 0 15px;
+          white-space: nowrap; }

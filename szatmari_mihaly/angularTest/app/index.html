@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myModule">
+    <head>
+        <title>SimpleForum</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="style/index.css"/>
+    </head>
+    <body ng-controller="myController">
+        <header>
+            <p>Simple<b>Forum</b></p>
+            <div>
+                <div>
+                    <input type="text" placeholder="Search"/>
+                    <button class="glyphicon glyphicon-search"></button>
+                </div>
+                <button>Login</button>
+            </div>
+        </header>
+        <section>
+            <div id="popUp" ng-show="popUpVisible">
+                <input type="hidden" class="method">
+                <input type="hidden" class="id">
+                <form>
+                    <div>
+                        <p>New topic</p>
+                        <button type="button" class="cancel" ng-click="cancel()">X</button>
+                    </div>
+                    <label for="title">Title</label>
+                    <input id="title" ng-model="newTopic.title"/>
+                    <label for="text">Text</label>
+                    <textarea id="text" ng-model="newTopic.brief" rows="6"></textarea>
+                    <label for="category">Type</label>
+                    <select id="category" ng-model="newTopic.category">
+                        <option>General</option>
+                        <option>Pictures</option>
+                        <option>Videos</option>
+                    </select>
+                    <p id="warning">Please fill in all the fields!</p>
+                    <button type="submit" id="submit" ng-click="addTopic()">Submit</button>
+                </form>
+            </div>
+            <!--<div id="alertBox" ng-show="alertBoxVisible">
+                <div>
+                    <input type="hidden" class="id">
+                    <button type="button" class="edit" ng-click="hide()">X</button>
+                    <p>Are you sure?</p>
+                    <div>
+                        <button type="button" class="edit">Yes</button>
+                        <button type="button" class="edit" ng-click="hide()">No</button>
+                    </div>
+                </div>
+            </div>-->
+            <div class="flex">
+                <div id="container">
+                    <button class="target" ng-click="openPopup()">New topic</button>
+                    <div id="template" ng-repeat="topic in topics">
+                        <div topic="topic" on-edit="edit" on-like="like" on-dislike="dislike" on-delete="delete"></div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <p><b>Categories</b></p>
+                            <i class="fa fa-folder blur"></i>
+                        </div>
+                        <div>
+                            <p>General</p>
+                            <span>3</span>
+                        </div>
+                        <div>
+                            <p>Pictures</p>
+                            <span>1</span>
+                        </div>
+                        <div>
+                            <p>Videos</p>
+                            <span>2</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p><b>Forum Statistics</b></p>
+                            <i class="fa fa-bar-chart blur"></i>
+                        </div>
+                        <div>
+                            <div>
+                                <i class="fa fa-comments large"></i>
+                                <p>Threads<br/><b>6</b></p>
+                            </div>
+                            <div>
+                                <i class="fa fa-comments-o large"></i>
+                                <p>Replies<br/><b>6</b></p>
+                            </div>
+                            <div>
+                                <i class="fa fa-group large"></i>
+                                <p>Members<br/><b>3</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p><b>Today's Events</b></p>
+                            <i class="fa fa-bullhorn blur"></i>
+                        </div>
+                        <div>
+                            <div>
+                                <i id="medium" class="fa fa-sign-in"></i>
+                                <p>Logins</p>
+                            </div>
+                            <div>
+                                <p>admin, moderator, user</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <div>
+                    <ul>
+                        <li>About us</li>
+                        <li>Terms</li>
+                    </ul>
+                </div>
+                <div>
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+            </div>
+            <div>
+                <p>&#169; 2015 SimpleForum - All Rights Reserved</p>
+                <p>Forum Time: MYT (Asia/Kuala_Lumpur)</p>
+            </div>
+        </footer>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/handlebars/handlebars.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="script/index.js"></script>
+        <script src="script/api.js"></script>
+        <script src="script/topic.js"></script>
+    </body>
+</html>
