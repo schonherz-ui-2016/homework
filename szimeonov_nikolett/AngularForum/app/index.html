@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style/index.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body ng-app="App">
+<header>
+    <div class="nav">
+        <h1>Simple<b>Forum</b></h1>
+
+        <div class="rightside">
+            <input class="search" type="search" placeholder="search">
+            <span id="searchbutton" class="glyphicon glyphicon-search"></span>
+            <a class="login" type="submit">Login</a>
+
+        </div>
+    </div>
+</header>
+
+
+<div ng-controller="first" id="mainBox">
+
+    <button ng-click="edit({})" id="myBtn" type="button" class="btn btn-primary btn-md newtopic">New Topic</button>
+    <form ng-show="popup" class="popUp newPopUp" style="display: block">
+        <div class="popupContent">
+            Title <input ng-model="topic.title" class="popTitle" type="text"><br>
+            Brief <textarea ng-model="topic.brief" class="popBrief" type="text"></textarea><br>
+
+            <button type="submit" ng-click="save(topic)">Save</button>
+        </div>
+    </form>
+
+    <div id="leftSide" class="col-sm-7">
+        <div ng-repeat="topic in response" class="container-fluid topic">
+            <div topic="topic" edit="edit" delete="delete" save-likes="saveLikes"></div>
+        </div>
+    </div>
+    <nav id="rightSide" class="col-sm-5">
+        <nav class="blueSide">
+            <nav class="row">
+                <h5>Categories<i class="fa fa-folder titleIcon"></i></h5>
+                <hr>
+            </nav>
+            <nav class="row">
+                <a href="#">General <span class="badge">5</span></a>
+                <hr>
+            </nav>
+            <nav class="row">
+                <a href="#">Pictures <span class="badge">1</span></a>
+                <hr>
+            </nav>
+            <nav class="row">
+                <a href="#">Videos <span class="badge">2</span></a>
+            </nav>
+        </nav>
+
+        <nav class="blueSide">
+            <nav class="row">
+                <h5>Forum Statistics<i class="fa fa-bar-chart titleIcon"></i></h5>
+                <hr>
+            </nav>
+            <nav class="row">
+                <nav class="col-md-4">
+                    <a href="#"><i class="fa fa-comments blueIcons" style="font-size:48px"></i> Threads <span
+                            class="badge">16</span></a>
+                </nav>
+                <nav class="col-md-4">
+                    <a href="#"><i class="fa fa-comments-o blueIcons" style="font-size:48px"></i> Replies <span
+                            class="badge">19</span></a>
+                </nav>
+                <nav class="col-md-4">
+                    <a href="#"><i class="fa fa-group blueIcons" style="font-size:48px"></i> Members <span
+                            class="badge">28</span></a>
+                </nav>
+            </nav>
+
+        </nav>
+        <nav class="blueSide">
+            <nav class="row">
+                <h5>Today's Events<i class="fa fa-bullhorn titleIcon"></i></h5>
+                <hr>
+            </nav>
+            <nav class="row">
+                <nav class="col-md-3">
+                    <a href="#"><i class="fa fa-sign-in" style="font-size:34px"></i> Logins </a>
+                </nav>
+                <nav class="col-md-9">
+                    <a href="#">admin, moderator, user,</a>
+                </nav>
+            </nav>
+        </nav>
+
+    </nav>
+    <div class="clearfix"></div>
+
+
+    <footer>
+        <div class="footerContent">
+            <ul class="list-inline">
+                <li class="toCenter"><a href="#">About us</a></li>
+                <li class="toCenter"><a href="#">Terms</a></li>
+                <li class="mediaIcons"><a href="#"><i class="fa fa-facebook-official"></i> </a></li>
+                <li class="mediaIcons"><a href="#"><i class="fa fa-twitter"></i> </a></li>
+                <li class="mediaIcons"><a href="#"><i class="fa fa-rss"></i> </a></li>
+            </ul>
+            <div class="line"></div>
+            <div class="footerTime">
+                <div>&copy; 2015 SimpleForum - All Rights Reserved <p class="mediaIcons">Forum Time: MYT
+                    (Asia/Kuala_Lumpur)</p></div>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="index.js"></script>
+<script src="api.js"></script>
+<script src="topic.js"></script>
+</body>
+</html>

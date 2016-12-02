@@ -1,0 +1,322 @@
+html {
+  margin: 0;
+}
+
+body {
+  background-color: rgba(219, 219, 219, 0.56);
+}
+
+.nav {
+  display: inline-block;
+  height: 60px;
+  width: 60%;
+}
+
+.login {
+  padding-left: 10px;
+  color: white;
+}
+
+.search {
+  background-color: rgba(58, 164, 239, 0.82);
+  border-radius: 5px;
+  height: 45px;
+  width: 250px;
+  padding-left: 10px;
+  margin: 5px;
+  border: none;
+  color: white;
+}
+
+input[placeholder="search"] {
+  color: white;
+  -webkit-text-fill-color: whitesmoke;
+  font-size: small;
+}
+
+a {
+  font-size: medium;
+  color: white;
+}
+
+#searchbutton {
+  margin-left: -2em;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  text-align: left;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: bold;
+  color: #00a3d9;
+}
+
+h5 {
+  font-weight: bolder;
+}
+
+header {
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: .3em .2em;
+  font-size: large;
+  background-color: #00a3d9;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(49, 116, 174, 0.39);
+  margin: 15px;
+}
+
+#mainBox {
+  display: block;
+}
+
+.container {
+  margin-left: 20%;
+  margin-bottom: 10px;
+}
+
+.profilePicture {
+  background-image: url("usericon.jpg");
+  height: 50px;
+  width: 50px;
+}
+
+div, nav[class="container"] {
+  margin-bottom: 10px;
+}
+
+div[class*="col-"] {
+  background-color: white;
+  border-radius: 2px;
+
+}
+
+p {
+  color: #b3b3b3;
+  margin-top: 10px;
+
+}
+
+.glyphicon-ok {
+  color: #b3b3b3;
+
+}
+
+.date {
+  background-color: #00a3d9;
+  border-color: #00a3d9;
+  border-radius: 2px;
+  color: white;
+  font-weight: bold;
+  font-size: smaller;
+
+}
+
+.general {
+  background-color: #00a3d9;
+  border-color: #00a3d9;
+  border-radius: 2px;
+  color: white;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+#mainBox {
+  max-width: 1000px;
+  margin: auto;
+
+  #leftSide, #rightSide {
+    display: block;
+    float: left;
+  }
+}
+
+.profilePicture {
+  background-image: url("usericon.jpg");
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-size: cover;
+  margin-top: 20px;
+}
+
+span.glyphicon-ok {
+  margin-left: 15px;
+  margin-top: 90px;
+}
+
+footer {
+  background-color: rgb(0, 163, 217);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  padding: .3em .2em;
+
+}
+
+.footerContent {
+  display: inline-block;
+  height: 70px;
+  width: 60%;
+  text-align: left;
+  background-color: rgb(0, 163, 217);
+}
+
+.mediaIcons {
+  float: right;
+  margin-top: 0;
+  color: white;
+}
+
+#folderIcon, #chartIcon, #bullhornIcon {
+  float: right;
+  margin-top: 0;
+  color: lightblue;
+}
+
+.badge {
+  background: #ffffff;
+  color: #00a3d9;
+}
+
+nav[class="row"] {
+  padding: 5px;
+  margin: 5px;
+
+}
+
+.row {
+  margin-top: 10px;
+
+}
+
+.template {
+  display: none;
+}
+
+.popUp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #00a3d9;
+  font-weight: bold;
+  z-index: 1000;
+  text-align: center;
+  align-items: center;
+}
+
+.popupContent {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#delete {
+  color: #2b669a;
+  position: relative;
+  left: 140px;
+}
+
+.blueSide {
+  width: 270px;
+  min-height: 125px;
+  background-color: #00a3d9;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.blueSide h5 {
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.badge {
+  position: relative;
+  float: right;
+  right: 15px;
+}
+
+nav[class="col-md-4"] {
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-color: #0797c7;
+  background-color: #00a3d9;
+
+}
+
+nav[class="col-md-3"] {
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-color: #0797c7;
+  background-color: #00a3d9;
+  border-radius: 2px;
+  color: white;
+}
+
+nav[class="col-md-9"] {
+  border-width: 0 1px 0 0;
+  background-color: #00a3d9;
+}
+
+div[class="col-sm-7"] {
+  margin-top: 10px;
+
+}
+
+#myBtn {
+  margin-top: 10px;
+  margin-left: 110px;
+
+}
+
+.titleIcon {
+  position: relative;
+  float: right;
+  right: 10px;
+  opacity: 0.5;
+}
+
+nav h5 {
+  color: white;
+}
+
+.delete, .edit, .likes {
+
+  position: relative;
+  left: 100px;
+  top: 5px;
+}
+
+.line {
+  margin-bottom: 10px;
+  border-style: none none solid none;
+  border-width: 1px;
+  border-color: white;
+}
