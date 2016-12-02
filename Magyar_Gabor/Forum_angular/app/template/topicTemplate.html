@@ -1,0 +1,48 @@
+<div class="icons">
+    <div class="modify-delete">
+        <i ng-click="onVote(topic().id)" data-id="{{topic().id}}" title="Vote Topic"
+           class="vote glyphicon glyphicon-plus"></i>
+        <i ng-click="onEdit(topic().id)" data-id="{{topic().id}}" title="Edit Topic"
+           class="modify glyphicon glyphicon-cog"></i>
+        <i ng-click="onDelete(topic().id)" data-id="{{topic().id}}" title="Delete Topic"
+           class="delete glyphicon glyphicon-remove"></i>
+    </div>
+</div>
+<div class="profile-picture text-center">
+    <img src="technoviking.jpg">
+    <i class="glyphicon glyphicon-ok"></i>
+</div>
+<div class="row" style="width:93%">
+    <div class="topic-body col-lg-9 col-md-12">
+        <h1 class="title">{{topic().title}}</h1>
+        <div class="time border-radius">
+            <i class="fa fa-clock-o"></i> <span class="created">{{topic().created}}</span>
+        </div>
+        <div class="type border-radius">
+            <i class="fa fa-folder"></i> <span class="category"> {{topic().category}}</span>
+        </div>
+        <p class="brief">{{topic().brief}}</p>
+    </div>
+    <div class="topic-stats col-lg-3 col-md-12 flex jcsb wrap" style="padding-top: 2em">
+        <div class="topic-stats-item">
+            <i class="fa fa-plus-square-o"></i>
+            <span class="votes"> {{topic().votes}} Votes</span>
+        </div>
+        <div class="topic-stats-item">
+            <i class="fa fa-eye"></i>
+            <span class="views"> {{topic().view}} Views</span>
+        </div>
+        <div class="topic-stats-item">
+            <i class="fa fa-comments-o"></i>
+            <span class="replies"> {{topic().replies}} Replies</span>
+        </div>
+        <div class="topic-stats-item">
+            <i class="fa fa-clock-o"></i>
+            <span class="last_view">{{topic().last_view}} Minutes</span>
+        </div>
+        <div class="topic-stats-item">
+            <i class="fa fa-mail-reply"></i>
+            <span class="last_comment">{{topic().last_comment}} Minutes</span>
+        </div>
+    </div>
+</div>
