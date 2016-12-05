@@ -1,0 +1,31 @@
+<div>
+    <div>
+        <div>
+            <img src="style/icon.png"/>
+            <i class="fa fa-check"></i>
+        </div>
+        <div>
+            <button class="delete" ng-click="onDelete(topic().id)">Delete</button>
+            <button class="edit" ng-click="onEdit(topic())">Edit</button>
+            <div class="buttons">
+                <button class="fa fa-thumbs-o-up vote" ng-click="onLike(topic())"></button>
+                <button class="fa fa-thumbs-o-down vote" ng-click="onDislike(topic())"></button>
+            </div>
+            <p>Votes:<br/>{{topic().votes}}</p>
+        </div>
+    </div>
+    <div>
+        <p class="title">{{topic().title}}</p>
+        <div>
+            <p class="fa fa-history created"> <b>{{topic().created}}</b></p>
+            <p class="fa fa-folder category"> <b>{{topic().category}}</b></p>
+        </div>
+        <p class="brief">{{topic().brief}}</p>
+    </div>
+</div>
+<div>
+    <p class="fa fa-eye views"> 0 View</p>
+    <p class="fa fa-comments-o reply"> 0 Reply</p>
+    <p class="fa fa-history time"> 0 Minutes</p>
+    <p class="fa fa-mail-reply replied"> 0 Minutes</p>
+</div>

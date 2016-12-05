@@ -1,0 +1,22 @@
+{
+  "name": "forum",
+  "description": "",
+  "main": "forum.js",
+  "authors": [
+    "Misi <szatmari.mihaly96@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/misi96/repo2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "handlebars": "^4.0.5",
+    "angular": "^1.5.9"
+  }
+}
