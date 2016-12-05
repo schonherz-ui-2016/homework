@@ -21,29 +21,31 @@ var loadTopics = function ($scope, response) {
             }
         }
         ;
+
         value.leftTime = leftTimeCount;
         value.leftTimeUnit = leftTimeUnit;
+        if (!value.like) {
+            value.like = 0;
+        }
 
     })
 };
-function alma($scope, $http) {
+function alma($scope, api) {
     $scope.name = "Fórum";
     function refresh() {
-        $http.get('/topics')
+        api.getTopics()
             .then(
                 function (response) {
                     console.log(response);
                     loadTopics($scope, response);
-
                 }
             )
             .catch(function (err) {
                 console.error(err);
             });
-
     }
 
-    $http.get('/topics')
+    api.getTopics()
         .then(
             function (response) {
                 console.log(response);
@@ -53,9 +55,9 @@ function alma($scope, $http) {
         .catch(function (err) {
             console.error(err);
         });
-
     $scope.topicDelete = function (topicId) {
-        $http.delete('/topics/' + topicId)
+        console.log("delete");
+        api.deleteTopic(topicId)//    $http.delete('/topics/' + topicId)
             .then(function () {
                 refresh();
             })
@@ -72,10 +74,12 @@ function alma($scope, $http) {
         $scope.newTopic.replay = 0;
         $scope.newTopic.leftTime = 0;
         $scope.newTopic.lastReplay = 0;
-        $http.post('/topics', $scope.newTopic).then(function () {
-            refresh();
-            $scope.newTopic = {};
-        });
+        $scope.newTopic.like = 0;
+        api.newTopic($scope.newTopic)// $http.post('/topics', $scope.newTopic)
+            .then(function () {
+                refresh();
+                $scope.newTopic = {};
+            });
         $scope.closeModal();
 
     }
@@ -85,28 +89,38 @@ function alma($scope, $http) {
     $scope.closeModal = function () {
         $scope.displayModal = false;
         $('#myModal').modal('hide');
+        refresh();
+
     }
     $scope.openTopic = function (topic) {
         $scope.displayModal = true;
         $scope.newTopic = topic;
         $scope.modify = true;
+        console.log("topic:");
+        console.log(topic);
 
     }
     $scope.modify = false;
     $scope.modTopic = function () {
-        $http.put('/topics/' + $scope.newTopic.id, $scope.newTopic).then(function () {
-            refresh();
-            $scope.displayModal = false;
-            $scope.newTopic = {};
-            $scope.closeModal();
-
-        })
-
+        api.editTopic($scope.newTopic)// $http.put('/topics/' + $scope.newTopic.id, $scope.newTopic)
+            .then(function () {
+                refresh();
+                $scope.displayModal = false;
+                $scope.newTopic = {};
+                $scope.closeModal();
+            })
     }
-
     $scope.openNewTopic = function () {
         $scope.newTopic = {};
         $scope.modify = false;
+    }
+    $scope.likeCount = function (topic) {
+        $scope.likeCountTopic = topic;
+        $scope.likeCountTopic.like++;
+        api.editTopic($scope.likeCountTopic)
+            .then(function () {
+                refresh();
+            })
     }
 }
 console.log(angular);

@@ -38,7 +38,6 @@
     </header>
 </div>
 <div class="container">
-
     <div class="row">
         <div class="col-sm-1 col-md-1" id="leftSpace">
             <!--<button class="buttonModal" ng-click="displayModalSee()">+</button>-->
@@ -49,53 +48,10 @@
         <div class="col-sm-7 col-md-7" id="leftContent">
             <section id="leftMain">
                 <div ng-repeat="topic in topics">
-                    <article class="article template">
+                    <div topic="topic" open-topic="openTopic" topic-delete="topicDelete" like-count="likeCount">
 
-                        <!--<div class="clearfix"></div>-->
-                        <div class="leftAuthor">
-                            <img src="images/userIcon.jpg" class="imageUser">
-                            <div><i class="glyphicon glyphicon-ok"></i></div>
-                        </div>
-                        <div class="contentArticle">
-                            <div class="titleArticle title">{{topic.title}}</div>
-                            <div class="clearfix"></div>
-                            <div class="titleUnder">
-                                <p>
-                                <span class="label label-primary"><span
-                                        class="glyphicon glyphicon-time"></span>&nbsp;<span class="created">{{topic.created}}</span></span>
-                                    <span class="label label-primary"><span
-                                            class="glyphicon glyphicon-folder-open">&nbsp;</span><span class="category">{{topic.category}}</span></span>
-                                </p>
-                            </div>
-                            <div class="comment brief">{{topic.brief}}</div>
-                        </div>
 
-                        <div class="rightInfo">
-                            <div>
-                                <button class="deleteTopic" type="submit" id="delTopic"
-                                        ng-click="topicDelete(topic.id)">x
-                                </button>
-                            </div>
-                            <div>
-
-                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                                        data-target="#myModal" ng-click="openTopic(topic)">Modify
-                                </button>
-
-                            </div>
-
-                            <div class="clearfix"></div>
-                            <div class="infoArticle "><span class="glyphicon glyphicon-eye-open">&nbsp;</span><span
-                                    class="views">{{topic.views}}</span> &nbsp;<span>View</span></div>
-                            <div class="infoArticle "><span class="fa fa-comments-o">&nbsp;&nbsp; </span><span
-                                    class="replay">{{topic.replay}}</span> <span>&nbsp;Reply</span></div>
-                            <div class="infoArticle"><span class="glyphicon glyphicon-time">&nbsp;</span><span
-                                    class="leftTime">{{topic.leftTime}} </span><span
-                                    class="leftTimeUnit">{{topic.leftTimeUnit}}</span></div>
-                            <div class="infoArticle "><span class="glyphicon glyphicon-share-alt">&nbsp;</span><span
-                                    class="lastReplay">{{topic.lastReplay}}</span><span> Minutes</span></div>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </section>
         </div>
@@ -190,7 +146,7 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button ng-click="closeModal()" type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title" ng-if="modify">Topic Modify</h4>
                 <h4 class="modal-title" ng-if="!modify">New topic</h4>
             </div>
@@ -234,7 +190,9 @@
             <div class="modal-footer">
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button ng-click="closeModal()" type="button" class="btn btn-default" data-dismiss="modal">
+                            Cancel
+                        </button>
                     </div>
 
                 </div>
@@ -247,6 +205,9 @@
 <!-- Modal -->
 
 <script src="bower_components/angular/angular.js"></script>
+
 <script src="script/index.js"></script>
+<script src="script/api.js"></script>
+<script src="script/topic.js"></script>
 </body>
 </html>
