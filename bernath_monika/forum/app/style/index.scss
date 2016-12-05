@@ -36,16 +36,19 @@ header{
         width: 300px;
         height: 2.5em;
       }
-      .search{
-        margin-left: -1.5em;
-        margin-right: 1.5em;
-        margin-top: 0.7em;
-      }
+
       #login {
         padding-top: .5em;
       }
    }
-
+  .search{
+    margin-left: -1.5em;
+    margin-right: 1.5em;
+    margin-top: 0.7em;
+  }
+  span.search:hover{
+    color: red;
+}
 }
 
 .fa-check, .fa-comments-o, .fa-eye, .fa-mail-reply, .fa-clock-o, .fa-folder{
@@ -85,6 +88,7 @@ header{
     float: left;
     display: flex;
     flex-direction: column;
+    width: 80%;
     .comments{
       margin: 0 10px 10px;
       background-color: $font-color;
@@ -97,7 +101,12 @@ header{
       .edit{
         margin: 1em 1em 13em 0;
       }
-      span.remove:hover, span.edit:hover, span.search:hover{
+      .vote{
+        margin: 1em 1em 13em 0;
+        display: flex;
+        flex-flow: column;
+      }
+      span.remove:hover, span.edit:hover, span.vote:hover{
         color: red;
       }
       .img_check{

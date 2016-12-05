@@ -2,48 +2,37 @@
  * Created by Moni on 2016.11.26..
  */
 
-console.log(angular);
-
-
 angular
     .module('Forumtop', [])
     .controller('first', First);
 
-function First($scope, $http) {
+function First($scope, api) {
     $scope.hello = 'hi';
     $scope.add = function () {
         $scope.value = true;
         $scope.new = {};
-        console.log('nyyaaa');
         $scope.method = "POST";
+        $scope.new.numberOfVote = 0;
     };
     $scope.newpost = function () {
-        var url = "";
+        var a = {};
         if($scope.method == "POST"){
-            url = '/topics';
+            a = api.newTopic($scope.new);
         } else{
-            url = '/topics/' + $scope.id;
+            a = api.editTopic($scope.new);
         }
-        $http({
-            method: $scope.method,
-            url: url,
-            data: $scope.new
-        }).then(function successCallback() {
+        console.log(a);
+        a.then(function () {
             render();
             $scope.value = false;
-            $scope.new = {};
-        }, function errorCallback(response) {
-            console.error(response);
-        });
+            console.log($scope.new.numberOfVote);
+        })
     };
     $scope.delete = function (id) {
-        $http({
-            method: 'DELETE',
-            url: '/topics/' + id
-        }).then(function successCallback() {
+        console.log(id);
+        var a = api.deleteTopic(id);
+        a.then(function(){
             render();
-        }, function errorCallback(response) {
-            console.error(response);
         });
     };
     $scope.edit = function (topic) {
@@ -51,11 +40,18 @@ function First($scope, $http) {
         $scope.value = true;
         $scope.method = "PUT";
         $scope.id = topic.id;
+        console.log($scope.id)
+    };
+    $scope.vote = function (topic) {
+        topic.numberOfVote++;
+        console.log(topic.numberOfVote);
+        api.editTopic(topic);
     };
     var render = function() {
-        $http.get('/topics')
+        api.getTopic()
             .then(function (res) {
                 $scope.topics = res.data;
+                console.log(res.data);
             })
             .catch(function (err) {
                 console.error(err);

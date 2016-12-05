@@ -1,0 +1,24 @@
+<div class="comments">
+    <div class="img_check">
+        <img src="style/image.jpg" rel="image">
+        <div class="fa fa-check"></div>
+    </div>
+    <div class="text">
+        <div class="panel-title">{{topic().title}}</div>
+        <div>
+            <div class="created fa fa-clock-o">{{topic().created}}</div>
+            <div class="category fa fa-folder">{{topic().category}}</div>
+        </div>
+        <div class="comments_text">{{topic().brief}}</div>
+    </div>
+    <hr/>
+    <div class="info">
+        <span class="views fa fa-eye">{{topic().views}}</span>
+        <span class="reply fa fa-comments-o">{{topic().reply}}</span>
+        <span class="lastWatch fa fa-clock-o">{{topic().lastWatch}}</span>
+        <span class="feedback fa fa-mail-reply" >{{topic().feedback}}</span>
+    </div>
+    <span class="remove glyphicon glyphicon-remove" ng-click="onDelete(topic().id)"></span>
+    <span class="edit glyphicon glyphicon-edit" ng-click="onEdit(topic())"></span>
+    <span class="vote method glyphicon glyphicon-heart" ng-click="onVote(topic())" >{{topic().numberOfVote}}</span>
+</div>
